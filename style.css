@@ -1,1 +1,383 @@
+:root {
+  --ivory: #fffaf7;
+  --soft-pink: #f9e1e5;
+  --pink: #c94f68;
+  --champagne: #c7964c;
+  --dark: #35282b;
+}
 
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--ivory);
+  color: var(--dark);
+}
+
+
+/* =========================
+   OPENING
+========================= */
+
+.opening {
+  position: fixed;
+  inset: 0;
+
+  min-height: 100svh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 10%,
+      rgba(249, 205, 214, 0.7),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 10% 85%,
+      rgba(249, 220, 225, 0.8),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #fffaf7,
+      #fff2f3
+    );
+
+  z-index: 100;
+}
+
+
+/* Bingkai champagne */
+
+.frame {
+  position: absolute;
+
+  inset: 18px;
+
+  border: 2px solid var(--champagne);
+
+  border-radius: 38px 8px 38px 8px;
+
+  pointer-events: none;
+}
+
+.frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border: 1px solid
+    rgba(199, 150, 76, 0.45);
+
+  border-radius: 30px 6px 30px 6px;
+}
+
+
+/* Content */
+
+.opening-content {
+  position: relative;
+
+  width: min(88%, 500px);
+
+  text-align: center;
+
+  padding: 50px 22px;
+
+  z-index: 3;
+}
+
+.bismillah {
+  font-family: "Amiri", serif;
+
+  color: var(--champagne);
+
+  font-size: clamp(27px, 7vw, 40px);
+
+  margin-bottom: 25px;
+}
+
+.small-title {
+  letter-spacing: 6px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  margin-bottom: 12px;
+}
+
+.ornament {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 10px;
+
+  color: var(--champagne);
+}
+
+.ornament span {
+  width: 65px;
+
+  height: 1px;
+
+  background: var(--champagne);
+}
+
+.opening h2 {
+  font-family: "Cormorant Garamond", serif;
+
+  letter-spacing: 4px;
+
+  font-size: clamp(30px, 8vw, 48px);
+
+  margin: 18px 0 35px;
+}
+
+.couple h1 {
+  font-family: "Great Vibes", cursive;
+
+  color: var(--pink);
+
+  font-weight: 400;
+
+  font-size: clamp(48px, 12vw, 80px);
+
+  line-height: 0.95;
+
+  margin: 15px 0;
+}
+
+.ampersand {
+  font-family: "Cormorant Garamond", serif;
+
+  color: var(--champagne);
+
+  font-size: 46px;
+}
+
+.opening-date {
+  margin: 35px 0 25px;
+
+  font-family: "Cormorant Garamond", serif;
+
+  letter-spacing: 4px;
+
+  color: var(--champagne);
+
+  font-weight: 600;
+
+  font-size: 19px;
+}
+
+
+/* Button */
+
+.open-btn {
+  border: 1px solid var(--champagne);
+
+  padding: 14px 30px;
+
+  border-radius: 100px;
+
+  background:
+    rgba(255, 255, 255, 0.55);
+
+  color: var(--pink);
+
+  font-family: "Montserrat", sans-serif;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 30px
+    rgba(184, 115, 130, 0.15);
+
+  transition: 0.3s;
+}
+
+.open-btn:hover {
+  transform: scale(1.04);
+
+  background: #fff;
+}
+
+.tap-hint {
+  position: absolute;
+
+  bottom: 35px;
+
+  font-size: 11px;
+
+  letter-spacing: 2px;
+
+  color: #9a7c7f;
+}
+
+
+/* =========================
+   OPEN ANIMATION
+========================= */
+
+.opening.opening-hide {
+  animation:
+    openingZoom 1.3s
+    cubic-bezier(.7, 0, .2, 1)
+    forwards;
+}
+
+@keyframes openingZoom {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.45);
+    visibility: hidden;
+  }
+
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.main-content {
+  display: none;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      #fffaf7,
+      #fff0f2
+    );
+}
+
+.main-content.show {
+  display: block;
+}
+
+.hero {
+  min-height: 100svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 60px 20px;
+}
+
+.hero-small {
+  letter-spacing: 5px;
+
+  color: var(--champagne);
+}
+
+.hero h1 {
+  font-family: "Great Vibes", cursive;
+
+  font-weight: 400;
+
+  color: var(--pink);
+
+  font-size: clamp(50px, 12vw, 82px);
+
+  margin: 6px;
+}
+
+.hero-and {
+  color: var(--champagne);
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size: 42px;
+}
+
+.countdown {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 7px;
+
+  margin-top: 35px;
+
+  width: min(100%, 390px);
+}
+
+.countdown div {
+  border:
+    1px solid
+    rgba(199, 150, 76, 0.55);
+
+  border-radius: 14px;
+
+  padding: 13px 5px;
+
+  background:
+    rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 8px 25px
+    rgba(188, 109, 126, 0.08);
+}
+
+.countdown span {
+  display: block;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  color: var(--pink);
+
+  font-size: 30px;
+
+  font-weight: 600;
+}
+
+.countdown small {
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  color: #957278;
+}
