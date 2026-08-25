@@ -1,1 +1,136 @@
+<!DOCTYPE html>
+<html lang="ms">
 
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Walimatul Urus | Haiqal & Icha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- OPENING PAGE -->
+
+  <section class="opening" id="opening">
+
+    <div class="frame"></div>
+
+    <div class="flower flower-top"></div>
+    <div class="flower flower-bottom"></div>
+
+    <div class="opening-content">
+
+      <div class="bismillah">
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </div>
+
+      <p class="small-title">
+        JEMPUTAN MAJLIS
+      </p>
+
+      <div class="ornament">
+        <span></span>
+        <b>♡</b>
+        <span></span>
+      </div>
+
+      <h2>WALIMATUL URUS</h2>
+
+      <div class="couple">
+
+        <h1 id="openingGroom"></h1>
+
+        <div class="ampersand">&</div>
+
+        <h1 id="openingBride"></h1>
+
+      </div>
+
+      <p class="opening-date" id="openingDate"></p>
+
+      <button
+        class="open-btn"
+        onclick="openInvitation()"
+      >
+        BUKA JEMPUTAN
+      </button>
+
+    </div>
+
+    <div class="tap-hint">
+      Sentuh untuk membuka
+    </div>
+
+  </section>
+
+
+  <!-- MAIN PAGE -->
+
+  <main id="mainContent" class="main-content">
+
+    <section class="hero">
+
+      <p class="hero-small">
+        WALIMATUL URUS
+      </p>
+
+      <h1 id="heroGroom"></h1>
+
+      <div class="hero-and">&</div>
+
+      <h1 id="heroBride"></h1>
+
+      <p id="heroDate"></p>
+
+      <div class="countdown">
+
+        <div>
+          <span id="days">0</span>
+          <small>HARI</small>
+        </div>
+
+        <div>
+          <span id="hours">0</span>
+          <small>JAM</small>
+        </div>
+
+        <div>
+          <span id="minutes">0</span>
+          <small>MINIT</small>
+        </div>
+
+        <div>
+          <span id="seconds">0</span>
+          <small>SAAT</small>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
