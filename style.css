@@ -461,3 +461,194 @@ body {
   }
 
 }
+/* =========================
+   SATIN EFFECT
+========================= */
+
+.satin {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+
+  width: 320px;
+  height: 78%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.15),
+      rgba(245,207,215,.9),
+      rgba(230,166,181,.88)
+    );
+
+  border-radius: 60% 0 0 20%;
+
+  opacity: .72;
+
+  filter: blur(1px);
+
+  transform-origin: bottom right;
+
+  animation: satinMove 7s ease-in-out infinite;
+
+  z-index: 1;
+}
+
+@keyframes satinMove {
+  0%, 100% {
+    transform:
+      rotate(-4deg)
+      translateX(0)
+      scaleY(1);
+  }
+
+  50% {
+    transform:
+      rotate(2deg)
+      translateX(-16px)
+      scaleY(1.04);
+  }
+}
+
+
+/* =========================
+   PETALS
+========================= */
+
+.petals {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+.petal {
+  position: absolute;
+  top: -60px;
+
+  width: 18px;
+  height: 12px;
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe3ea,
+      #e9a9b9
+    );
+
+  opacity: .7;
+
+  animation:
+    petalFall linear forwards;
+}
+
+@keyframes petalFall {
+
+  0% {
+    transform:
+      translate3d(0,-10vh,0)
+      rotate(0deg);
+  }
+
+  30% {
+    transform:
+      translate3d(-20px,30vh,0)
+      rotate(110deg);
+  }
+
+  60% {
+    transform:
+      translate3d(18px,65vh,0)
+      rotate(230deg);
+  }
+
+  100% {
+    transform:
+      translate3d(-10px,110vh,0)
+      rotate(380deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================
+   SPARKLE
+========================= */
+
+.sparkles {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.sparkle {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--champagne);
+
+  box-shadow:
+    0 0 8px rgba(212,175,120,.9),
+    0 0 18px rgba(212,175,120,.45);
+
+  animation:
+    sparkleBlink 2.5s ease-in-out infinite;
+}
+
+.s1 {
+  top: 18%;
+  left: 16%;
+}
+
+.s2 {
+  top: 28%;
+  right: 18%;
+  animation-delay: .8s;
+}
+
+.s3 {
+  top: 55%;
+  left: 25%;
+  animation-delay: 1.3s;
+}
+
+.s4 {
+  bottom: 22%;
+  right: 14%;
+  animation-delay: .5s;
+}
+
+.s5 {
+  bottom: 12%;
+  left: 48%;
+  animation-delay: 1.7s;
+}
+
+@keyframes sparkleBlink {
+
+  0%,
+  100% {
+    opacity: .2;
+    transform: scale(.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
