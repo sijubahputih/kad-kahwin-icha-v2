@@ -162,3 +162,40 @@ setInterval(
   updateCountdown,
   1000
 );
+const petals =
+  document.getElementById("petals");
+
+function createPetal() {
+
+  const petal =
+    document.createElement("span");
+
+  petal.className = "petal";
+
+  petal.style.left =
+    Math.random() * 100 + "%";
+
+  petal.style.animationDuration =
+    7 + Math.random() * 6 + "s";
+
+  petal.style.opacity =
+    0.35 + Math.random() * 0.45;
+
+  petal.style.width =
+    12 + Math.random() * 12 + "px";
+
+  petal.style.height =
+    8 + Math.random() * 8 + "px";
+
+  petals.appendChild(petal);
+
+  setTimeout(function () {
+    petal.remove();
+  }, 14000);
+
+}
+
+setInterval(
+  createPetal,
+  700
+);
