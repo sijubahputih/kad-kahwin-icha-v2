@@ -199,3 +199,31 @@ setInterval(
   createPetal,
   700
 );
+const floralTop =
+  document.querySelector(".floral-top");
+
+const floralBottom =
+  document.querySelector(".floral-bottom");
+
+window.addEventListener(
+  "mousemove",
+  function (e) {
+
+    const x =
+      (e.clientX / window.innerWidth - 0.5) * 14;
+
+    const y =
+      (e.clientY / window.innerHeight - 0.5) * 14;
+
+    if (floralTop) {
+      floralTop.style.transform =
+        `translate(${x}px, ${y}px)`;
+    }
+
+    if (floralBottom) {
+      floralBottom.style.transform =
+        `translate(${-x}px, ${-y}px)`;
+    }
+
+  }
+);
