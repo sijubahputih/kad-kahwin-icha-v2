@@ -227,3 +227,22 @@ window.addEventListener(
 
   }
 );
+window.addEventListener(
+  "scroll",
+  function () {
+
+    const move =
+      window.scrollY * 0.05;
+
+    if (floralTop) {
+      floralTop.style.transform =
+        `translateY(${move}px)`;
+    }
+
+    if (floralBottom) {
+      floralBottom.style.transform =
+        `translateY(${-move}px)`;
+    }
+
+  }
+);
