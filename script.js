@@ -1,64 +1,70 @@
 // =============================
-// LOAD WEDDING DATA
+// LOAD WEDDING CONTENT
 // =============================
 
-const openingGroom =
-  document.getElementById("openingGroom");
+document.getElementById(
+  "openingGroom"
+).textContent =
+  wedding.groom.shortName;
 
-const openingBride =
-  document.getElementById("openingBride");
-
-const heroGroom =
-  document.getElementById("heroGroom");
-
-const heroBride =
-  document.getElementById("heroBride");
-
-openingGroom.textContent =
-  wedding.groom.first;
-
-openingBride.textContent =
-  wedding.bride.first;
-
-heroGroom.textContent =
-  wedding.groom.first;
-
-heroBride.textContent =
-  wedding.bride.first;
+document.getElementById(
+  "openingBride"
+).textContent =
+  wedding.bride.shortName;
 
 document.getElementById(
   "openingDate"
-).textContent = wedding.dateShort;
+).textContent =
+  wedding.dateShort;
+
+document.getElementById(
+  "heroGroom"
+).textContent =
+  wedding.groom.shortName;
+
+document.getElementById(
+  "heroBride"
+).textContent =
+  wedding.bride.shortName;
 
 document.getElementById(
   "heroDate"
 ).textContent =
-  wedding.day + ", " + wedding.date;
+  `${wedding.day}, ${wedding.dateText}`;
 
 
-// =============================
+//
 // OPEN INVITATION
-// =============================
+//
 
 function openInvitation() {
 
   const opening =
-    document.getElementById("opening");
+    document.getElementById(
+      "opening"
+    );
 
-  const main =
-    document.getElementById("mainContent");
+  const mainPage =
+    document.getElementById(
+      "mainPage"
+    );
 
   opening.classList.add(
-    "opening-hide"
+    "is-opening"
   );
 
   setTimeout(function () {
 
-    main.classList.add("show");
+    mainPage.classList.add(
+      "show"
+    );
 
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      behavior: "instant"
+    });
 
-  }, 900);
+  }, 850);
 
 }
 
@@ -69,18 +75,35 @@ function openInvitation() {
 
 const targetDate =
   new Date(
-    wedding.countdown
+    wedding.countdownDate
   ).getTime();
 
 function updateCountdown() {
 
   const now =
-    new Date().getTime();
+    Date.now();
 
   const distance =
     targetDate - now;
 
   if (distance <= 0) {
+
+    document.getElementById(
+      "days"
+    ).textContent = "0";
+
+    document.getElementById(
+      "hours"
+    ).textContent = "0";
+
+    document.getElementById(
+      "minutes"
+    ).textContent = "0";
+
+    document.getElementById(
+      "seconds"
+    ).textContent = "0";
+
     return;
   }
 
@@ -92,43 +115,44 @@ function updateCountdown() {
 
   const hours =
     Math.floor(
-      (
-        distance /
-        (1000 * 60 * 60)
-      ) % 24
+      distance /
+      (1000 * 60 * 60) %
+      24
     );
 
   const minutes =
     Math.floor(
-      (
-        distance /
-        (1000 * 60)
-      ) % 60
+      distance /
+      (1000 * 60) %
+      60
     );
 
   const seconds =
     Math.floor(
-      (
-        distance /
-        1000
-      ) % 60
+      distance /
+      1000 %
+      60
     );
 
   document.getElementById(
     "days"
-  ).textContent = days;
+  ).textContent =
+    days;
 
   document.getElementById(
     "hours"
-  ).textContent = hours;
+  ).textContent =
+    hours;
 
   document.getElementById(
     "minutes"
-  ).textContent = minutes;
+  ).textContent =
+    minutes;
 
   document.getElementById(
     "seconds"
-  ).textContent = seconds;
+  ).textContent =
+    seconds;
 
 }
 
