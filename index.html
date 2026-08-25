@@ -4,14 +4,13 @@
 <head>
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>Walimatul Urus | Haiqal & Icha</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
   <link rel="preconnect"
         href="https://fonts.gstatic.com"
@@ -27,14 +26,10 @@
 
 <body>
 
-  <!-- OPENING PAGE -->
-
+  <!-- PAGE 1 -->
   <section class="opening" id="opening">
 
-    <div class="frame"></div>
-
-    <div class="flower flower-top"></div>
-    <div class="flower flower-bottom"></div>
+    <div class="opening-frame"></div>
 
     <div class="opening-content">
 
@@ -42,53 +37,52 @@
         بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
       </div>
 
-      <p class="small-title">
-        JEMPUTAN MAJLIS
+      <p class="eyebrow">
+        JEMPUTAN KE MAJLIS
       </p>
 
-      <div class="ornament">
+      <h2 class="wedding-title">
+        WALIMATUL URUS
+      </h2>
+
+      <div class="divider">
         <span></span>
         <b>♡</b>
         <span></span>
       </div>
 
-      <h2>WALIMATUL URUS</h2>
+      <h1 class="couple-name"
+          id="openingGroom"></h1>
 
-      <div class="couple">
+      <div class="ampersand">&</div>
 
-        <h1 id="openingGroom"></h1>
+      <h1 class="couple-name"
+          id="openingBride"></h1>
 
-        <div class="ampersand">&</div>
+      <p class="opening-date"
+         id="openingDate"></p>
 
-        <h1 id="openingBride"></h1>
-
-      </div>
-
-      <p class="opening-date" id="openingDate"></p>
-
-      <button
-        class="open-btn"
-        onclick="openInvitation()"
-      >
+      <button class="open-btn"
+              onclick="openInvitation()">
         BUKA JEMPUTAN
       </button>
 
     </div>
 
-    <div class="tap-hint">
+    <p class="tap-note">
       Sentuh untuk membuka
-    </div>
+    </p>
 
   </section>
 
 
-  <!-- MAIN PAGE -->
-
-  <main id="mainContent" class="main-content">
+  <!-- PAGE 2 -->
+  <main class="main-page"
+        id="mainPage">
 
     <section class="hero">
 
-      <p class="hero-small">
+      <p class="hero-eyebrow">
         WALIMATUL URUS
       </p>
 
@@ -98,26 +92,27 @@
 
       <h1 id="heroBride"></h1>
 
-      <p id="heroDate"></p>
+      <p class="hero-date"
+         id="heroDate"></p>
 
       <div class="countdown">
 
-        <div>
+        <div class="count-item">
           <span id="days">0</span>
           <small>HARI</small>
         </div>
 
-        <div>
+        <div class="count-item">
           <span id="hours">0</span>
           <small>JAM</small>
         </div>
 
-        <div>
+        <div class="count-item">
           <span id="minutes">0</span>
           <small>MINIT</small>
         </div>
 
-        <div>
+        <div class="count-item">
           <span id="seconds">0</span>
           <small>SAAT</small>
         </div>
@@ -127,7 +122,6 @@
     </section>
 
   </main>
-
 
   <script src="config.js"></script>
   <script src="script.js"></script>
