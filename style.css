@@ -1,9 +1,10 @@
 :root {
-  --ivory: #fffaf7;
-  --soft-pink: #f9e1e5;
-  --pink: #c94f68;
-  --champagne: #c7964c;
-  --dark: #35282b;
+  --ivory: #fffaf8;
+  --soft-pink: #f7dde4;
+  --pink: #d87f94;
+  --deep-pink: #b85e74;
+  --champagne: #d4af78;
+  --dark: #4b383d;
 }
 
 * {
@@ -14,6 +15,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  min-height: 100%;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
 
 
 /* =========================
-   OPENING
+   PAGE 1
 ========================= */
 
 .opening {
@@ -34,70 +36,69 @@ body {
   min-height: 100svh;
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   overflow: hidden;
 
   background:
     radial-gradient(
-      circle at 85% 10%,
-      rgba(249, 205, 214, 0.7),
-      transparent 25%
+      circle at 85% 12%,
+      rgba(247, 221, 228, .95),
+      transparent 28%
     ),
     radial-gradient(
-      circle at 10% 85%,
-      rgba(249, 220, 225, 0.8),
-      transparent 30%
+      circle at 12% 88%,
+      rgba(249, 230, 234, .95),
+      transparent 32%
     ),
     linear-gradient(
-      135deg,
-      #fffaf7,
-      #fff2f3
+      145deg,
+      #fffaf8,
+      #fff1f4
     );
 
-  z-index: 100;
+  z-index: 1000;
 }
 
-
-/* Bingkai champagne */
-
-.frame {
+.opening-frame {
   position: absolute;
 
   inset: 18px;
 
-  border: 2px solid var(--champagne);
+  border:
+    1.5px solid
+    rgba(212, 175, 120, .85);
 
-  border-radius: 38px 8px 38px 8px;
+  border-radius:
+    42px 8px 42px 8px;
 
   pointer-events: none;
 }
 
-.frame::after {
+.opening-frame::after {
   content: "";
 
   position: absolute;
 
   inset: 8px;
 
-  border: 1px solid
-    rgba(199, 150, 76, 0.45);
+  border:
+    1px solid
+    rgba(212, 175, 120, .35);
 
-  border-radius: 30px 6px 30px 6px;
+  border-radius:
+    34px 6px 34px 6px;
 }
-
-
-/* Content */
 
 .opening-content {
   position: relative;
 
-  width: min(88%, 500px);
+  width: min(88%, 520px);
+
+  padding: 50px 24px;
 
   text-align: center;
-
-  padding: 50px 22px;
 
   z-index: 3;
 }
@@ -107,189 +108,214 @@ body {
 
   color: var(--champagne);
 
-  font-size: clamp(27px, 7vw, 40px);
+  font-size:
+    clamp(27px, 7vw, 42px);
 
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
-.small-title {
-  letter-spacing: 6px;
+.eyebrow {
+  margin: 0 0 12px;
 
-  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 5px;
 
-  font-size: 16px;
+  font-size: 13px;
 
-  font-weight: 600;
-
-  margin-bottom: 12px;
+  font-weight: 500;
 }
 
-.ornament {
+.wedding-title {
+  margin: 0 0 18px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(30px, 8vw, 48px);
+
+  letter-spacing: 3px;
+}
+
+.divider {
   display: flex;
 
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   gap: 10px;
 
   color: var(--champagne);
+
+  margin-bottom: 28px;
 }
 
-.ornament span {
-  width: 65px;
-
+.divider span {
+  width: 58px;
   height: 1px;
 
-  background: var(--champagne);
+  background:
+    var(--champagne);
 }
 
-.opening h2 {
-  font-family: "Cormorant Garamond", serif;
+.couple-name {
+  margin: 14px 0;
 
-  letter-spacing: 4px;
+  font-family:
+    "Great Vibes",
+    cursive;
 
-  font-size: clamp(30px, 8vw, 48px);
+  font-size:
+    clamp(50px, 13vw, 82px);
 
-  margin: 18px 0 35px;
-}
-
-.couple h1 {
-  font-family: "Great Vibes", cursive;
-
-  color: var(--pink);
+  line-height: .95;
 
   font-weight: 400;
 
-  font-size: clamp(48px, 12vw, 80px);
-
-  line-height: 0.95;
-
-  margin: 15px 0;
+  color: var(--deep-pink);
 }
 
 .ampersand {
-  font-family: "Cormorant Garamond", serif;
+  margin: 4px 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 44px;
 
   color: var(--champagne);
-
-  font-size: 46px;
 }
 
 .opening-date {
-  margin: 35px 0 25px;
+  margin: 32px 0 25px;
 
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
 
   letter-spacing: 4px;
 
   color: var(--champagne);
-
-  font-weight: 600;
-
-  font-size: 19px;
 }
 
-
-/* Button */
-
 .open-btn {
-  border: 1px solid var(--champagne);
-
-  padding: 14px 30px;
+  padding: 14px 32px;
 
   border-radius: 100px;
 
+  border:
+    1px solid
+    rgba(184, 94, 116, .45);
+
   background:
-    rgba(255, 255, 255, 0.55);
+    rgba(255, 255, 255, .58);
 
-  color: var(--pink);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 
-  font-family: "Montserrat", sans-serif;
+  color: var(--deep-pink);
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
 
   letter-spacing: 2px;
 
   cursor: pointer;
 
   box-shadow:
-    0 10px 30px
-    rgba(184, 115, 130, 0.15);
+    0 12px 32px
+    rgba(184, 94, 116, .16);
 
-  transition: 0.3s;
+  transition: .3s ease;
 }
 
 .open-btn:hover {
-  transform: scale(1.04);
-
-  background: #fff;
+  transform:
+    translateY(-2px)
+    scale(1.03);
 }
 
-.tap-hint {
+.tap-note {
   position: absolute;
 
-  bottom: 35px;
+  bottom: 28px;
 
-  font-size: 11px;
+  margin: 0;
+
+  font-size: 10px;
 
   letter-spacing: 2px;
 
-  color: #9a7c7f;
+  color: #a58389;
 }
 
 
 /* =========================
-   OPEN ANIMATION
+   PAGE OPEN ANIMATION
 ========================= */
 
-.opening.opening-hide {
+.opening.is-opening {
   animation:
-    openingZoom 1.3s
+    openPage 1.25s
     cubic-bezier(.7, 0, .2, 1)
     forwards;
 }
 
-@keyframes openingZoom {
+@keyframes openPage {
 
   0% {
     opacity: 1;
     transform: scale(1);
   }
 
-  60% {
-    opacity: 1;
+  65% {
+    opacity: .95;
     transform: scale(1.08);
   }
 
   100% {
     opacity: 0;
-    transform: scale(1.45);
+    transform: scale(1.4);
     visibility: hidden;
   }
-
 }
 
 
 /* =========================
-   MAIN PAGE
+   PAGE 2
 ========================= */
 
-.main-content {
+.main-page {
   display: none;
 
   min-height: 100vh;
 
   background:
     linear-gradient(
-      #fffaf7,
-      #fff0f2
+      180deg,
+      #fffaf8,
+      #fff0f3
     );
 }
 
-.main-content.show {
+.main-page.show {
   display: block;
 }
 
 .hero {
   min-height: 100svh;
+
+  padding: 60px 20px;
 
   display: flex;
 
@@ -300,84 +326,138 @@ body {
   justify-content: center;
 
   text-align: center;
-
-  padding: 60px 20px;
 }
 
-.hero-small {
+.hero-eyebrow {
+  margin-bottom: 25px;
+
   letter-spacing: 5px;
 
   color: var(--champagne);
+
+  font-size: 13px;
 }
 
 .hero h1 {
-  font-family: "Great Vibes", cursive;
+  margin: 5px 0;
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  font-size:
+    clamp(52px, 13vw, 86px);
 
   font-weight: 400;
 
-  color: var(--pink);
+  line-height: 1;
 
-  font-size: clamp(50px, 12vw, 82px);
-
-  margin: 6px;
+  color: var(--deep-pink);
 }
 
 .hero-and {
-  color: var(--champagne);
-
-  font-family: "Cormorant Garamond", serif;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
   font-size: 42px;
+
+  color: var(--champagne);
+
+  margin: 5px 0;
+}
+
+.hero-date {
+  margin-top: 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  letter-spacing: 2px;
 }
 
 .countdown {
+  width: min(100%, 390px);
+
   display: grid;
 
   grid-template-columns:
     repeat(4, 1fr);
 
-  gap: 7px;
+  gap: 8px;
 
   margin-top: 35px;
-
-  width: min(100%, 390px);
 }
 
-.countdown div {
+.count-item {
+  padding: 14px 5px;
+
+  border-radius: 15px;
+
   border:
     1px solid
-    rgba(199, 150, 76, 0.55);
-
-  border-radius: 14px;
-
-  padding: 13px 5px;
+    rgba(212, 175, 120, .5);
 
   background:
-    rgba(255, 255, 255, 0.6);
+    rgba(255, 255, 255, .62);
 
   box-shadow:
-    0 8px 25px
-    rgba(188, 109, 126, 0.08);
+    0 10px 26px
+    rgba(184, 94, 116, .08);
 }
 
-.countdown span {
+.count-item span {
   display: block;
 
   font-family:
     "Cormorant Garamond",
     serif;
 
-  color: var(--pink);
-
   font-size: 30px;
 
   font-weight: 600;
+
+  color: var(--deep-pink);
 }
 
-.countdown small {
+.count-item small {
   font-size: 9px;
 
   letter-spacing: 1px;
 
-  color: #957278;
+  color: #92757b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+  .opening-content {
+    padding:
+      40px 20px;
+  }
+
+  .bismillah {
+    margin-bottom: 20px;
+  }
+
+  .wedding-title {
+    margin-bottom: 14px;
+  }
+
+  .couple-name {
+    font-size:
+      clamp(48px, 15vw, 70px);
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
 }
