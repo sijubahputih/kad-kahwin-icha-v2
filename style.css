@@ -652,3 +652,38 @@ body {
     transform: scale(1.5);
   }
 }
+/* =========================
+   FLORAL CORNERS
+========================= */
+
+.floral {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  transition: transform .2s ease-out;
+}
+
+.floral-top {
+  top: -35px;
+  right: -40px;
+
+  background-image:
+    url("assets/images/floral-top.png");
+}
+
+.floral-bottom {
+  bottom: -35px;
+  left: -40px;
+
+  background-image:
+    url("assets/images/floral-bottom.png");
+}
