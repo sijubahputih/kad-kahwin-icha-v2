@@ -36,36 +36,138 @@ document.getElementById(
 //
 // OPEN INVITATION
 //
+function fadeOutAudio(audio, duration = 800) {
 
-function openInvitation() {
+  if (!audio || audio.paused) return;
+
+  const startVolume = audio.volume;
+  const steps = 20;
+  const intervalTime = duration / steps;
+
+  let step = 0;
+
+  const fade = setInterval(function () {
+
+    step++;
+
+    audio.volume =
+      Math.max(
+        0,
+        startVolume * (1 - step / steps)
+      );
+
+    if (step >= steps) {
+
+      clearInterval(fade);
+
+      audio.pause();
+      audio.currentTime = 0;
+      audio.volume = startVolume;
+    }
+
+  }, intervalTime);
+}
+
+
+async function startMainMusic() {
+
+  const main =
+    document.getElementById("mainMusic");
+
+  try {
+
+    main.volume = 0;
+
+    await main.play();
+
+    fadeInAudio(main, 1200, 0.5);
+
+  } catch (error) {
+
+    console.log(
+      "Main music blocked:",
+      error
+    );
+
+  }
+}
+
+
+function fadeInAudio(
+  audio,
+  duration = 1000,
+  targetVolume = 0.5
+) {
+
+  const steps = 20;
+  const intervalTime = duration / steps;
+
+  let step = 0;
+
+  const fade = setInterval(function () {
+
+    step++;
+
+    audio.volume =
+      Math.min(
+        targetVolume,
+        targetVolume * step / steps
+      );
+
+    if (step >= steps) {
+
+      clearInterval(fade);
+
+      audio.volume = targetVolume;
+    }
+
+  }, intervalTime);
+}
+async function openInvitation() {
 
   const opening =
-    document.getElementById(
-      "opening"
-    );
+    document.getElementById("opening");
 
   const mainPage =
-    document.getElementById(
-      "mainPage"
-    );
+    document.getElementById("mainPage");
 
-  opening.classList.add(
-    "is-opening"
-  );
+  const intro =
+    document.getElementById("introMusic");
 
+  const main =
+    document.getElementById("mainMusic");
+
+  // Mainkan intro kerana pengguna sudah klik
+  try {
+    intro.volume = 0.55;
+    intro.currentTime = 0;
+    await intro.play();
+  } catch (error) {
+    console.log("Intro music blocked:", error);
+  }
+
+  opening.classList.add("is-opening");
+
+  // Fade-out intro
   setTimeout(function () {
 
-    mainPage.classList.add(
-      "show"
-    );
+    fadeOutAudio(intro, 700);
+
+  }, 300);
+
+  // Masuk Page 2
+  setTimeout(function () {
+
+    mainPage.classList.add("show");
 
     window.scrollTo({
       top: 0,
       behavior: "instant"
     });
 
-  }, 850);
+    startMainMusic();
 
+  }, 850);
 }
 
 
@@ -242,6 +344,61 @@ window.addEventListener(
     if (floralBottom) {
       floralBottom.style.transform =
         `translateY(${-move}px)`;
+    }
+
+  }
+);
+const musicControl =
+  document.getElementById("musicControl");
+
+musicControl.addEventListener(
+  "click",
+  async function () {
+
+    const opening =
+      document.getElementById("opening");
+
+    const intro =
+      document.getElementById("introMusic");
+
+    const main =
+      document.getElementById("mainMusic");
+
+    const openingActive =
+      !opening.classList.contains("is-opening");
+
+    const activeMusic =
+      openingActive ? intro : main;
+
+    if (activeMusic.paused) {
+
+      try {
+
+        activeMusic.volume = 0.5;
+
+        await activeMusic.play();
+
+        musicControl.classList.add(
+          "playing"
+        );
+
+      } catch (error) {
+
+        console.log(
+          "Music failed:",
+          error
+        );
+
+      }
+
+    } else {
+
+      activeMusic.pause();
+
+      musicControl.classList.remove(
+        "playing"
+      );
+
     }
 
   }
