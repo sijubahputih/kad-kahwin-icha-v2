@@ -1230,11 +1230,11 @@ body {
 .hero-satin {
   position: absolute;
 
-  right: -20px;
-  bottom: -40px;
-
-  width: 320px;
-  height: 72%;
+  right: -70px;
+  bottom: -80px;
+  
+  width: 280px;
+  height: 65%;
 
   border-radius: 65% 0 0 18%;
 
@@ -1248,7 +1248,7 @@ body {
       rgba(255,255,255,.18) 100%
     );
 
-  opacity: .75;
+  opacity: .55;
 
   filter: blur(0.5px);
 
