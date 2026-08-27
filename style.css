@@ -1287,3 +1287,77 @@ body {
 .hero-satin {
   outline: 3px solid red;
 }
+/* =========================
+   PAGE 2 SPARKLES
+========================= */
+
+.hero-sparkles {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+  z-index: 2;
+}
+
+.hero-spark {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #d4af78;
+
+  box-shadow:
+    0 0 8px rgba(212,175,120,.9),
+    0 0 18px rgba(212,175,120,.45);
+
+  animation:
+    heroSparkleBlink 2.8s
+    ease-in-out
+    infinite;
+}
+
+.hs1 {
+  top: 18%;
+  left: 16%;
+}
+
+.hs2 {
+  top: 28%;
+  right: 18%;
+  animation-delay: .7s;
+}
+
+.hs3 {
+  top: 55%;
+  left: 22%;
+  animation-delay: 1.2s;
+}
+
+.hs4 {
+  bottom: 22%;
+  right: 15%;
+  animation-delay: .4s;
+}
+
+.hs5 {
+  bottom: 13%;
+  left: 52%;
+  animation-delay: 1.8s;
+}
+
+@keyframes heroSparkleBlink {
+
+  0%,
+  100% {
+    opacity: .2;
+    transform: scale(.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.6);
+  }
+}
