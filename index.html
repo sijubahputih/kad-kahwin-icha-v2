@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ms">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Walimatul Urus | Haiqal & Icha</title>
+
+  <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- PAGE 1 -->
+  <section class="opening" id="opening">
+
+    <div class="opening-frame"></div>
+    
+    <div class="floral floral-top"></div>
+    <div class="floral floral-bottom"></div>
+    
+<div class="satin"></div>
+
+<div class="petals" id="petals"></div>
+
+<div class="sparkles">
+  <span class="sparkle s1"></span>
+  <span class="sparkle s2"></span>
+  <span class="sparkle s3"></span>
+  <span class="sparkle s4"></span>
+  <span class="sparkle s5"></span>
+</div>
+    <div class="opening-content">
+
+      <div class="bismillah">
+        بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيْمِ
+      </div>
+
+      <p class="eyebrow">
+        JEMPUTAN KE MAJLIS
+      </p>
+
+      <h2 class="wedding-title">
+        WALIMATUL URUS
+      </h2>
+
+      <div class="divider">
+        <span></span>
+        <b>♡</b>
+        <span></span>
+      </div>
+
+      <h1 class="couple-name"
+          id="openingGroom"></h1>
+
+      <div class="ampersand">&</div>
+
+      <h1 class="couple-name"
+          id="openingBride"></h1>
+
+      <p class="opening-date"
+         id="openingDate"></p>
+
+      <button class="open-btn"
+              onclick="openInvitation()">
+        BUKA JEMPUTAN
+      </button>
+
+    </div>
+
+    <p class="tap-note">
+      Sentuh untuk membuka
+    </p>
+
+  </section>
+
+
+  <!-- PAGE 2 -->
+  <main class="main-page" id="mainPage">
+
+    <!-- HERO -->
+    <section class="hero section-shell reveal-section">
+
+      <p class="hero-eyebrow">WALIMATUL URUS</p>
+
+      <h1 id="heroGroom"></h1>
+
+      <div class="hero-and">&</div>
+
+      <h1 id="heroBride"></h1>
+
+      <p class="hero-date" id="heroDate"></p>
+
+      <div class="countdown">
+        <div class="count-item">
+          <span id="days">0</span>
+          <small>HARI</small>
+        </div>
+
+        <div class="count-item">
+          <span id="hours">0</span>
+          <small>JAM</small>
+        </div>
+
+        <div class="count-item">
+          <span id="minutes">0</span>
+          <small>MINIT</small>
+        </div>
+
+        <div class="count-item">
+          <span id="seconds">0</span>
+          <small>SAAT</small>
+        </div>
+      </div>
+
+      <div class="scroll-cue">SCROLL ↓</div>
+    </section>
+
+
+    <!-- JEMPUTAN -->
+    <section class="content-section invitation-section reveal-section">
+
+      <div class="section-card invitation-card">
+
+        <div class="section-ornament">♡</div>
+
+        <p class="section-kicker">JEMPUTAN KE MAJLIS</p>
+        <h2>Walimatul Urus</h2>
+
+        <p class="invitation-copy">
+          Dengan penuh kesyukuran ke hadrat Ilahi, kami dengan segala hormatnya
+          menjemput Dato' / Datin / Tuan / Puan / Encik / Cik sekeluarga
+          ke majlis perkahwinan anakanda kami
+        </p>
+
+        <div class="parents-grid">
+          <div class="parent-side">
+            <span class="side-label">PIHAK PENGANTIN LELAKI</span>
+            <strong id="groomFather"></strong>
+            <span>&</span>
+            <strong id="groomMother"></strong>
+          </div>
+
+          <div class="parent-divider">♡</div>
+
+          <div class="parent-side">
+            <span class="side-label">PIHAK PENGANTIN WANITA</span>
+            <strong id="brideFather"></strong>
+            <span>&</span>
+            <strong id="brideMother"></strong>
+          </div>
+        </div>
+
+        <div class="full-couple">
+          <div>
+            <span class="full-name-main" id="fullGroom"></span>
+          </div>
+
+          <div class="couple-heart">&</div>
+
+          <div>
+            <span class="full-name-main" id="fullBride"></span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ATUR CARA -->
+    <section class="content-section reveal-section">
+
+      <div class="section-card">
+
+        <p class="section-kicker">ATUR CARA MAJLIS</p>
+        <h2>Hari Bahagia Kami</h2>
+
+        <div class="schedule-grid">
+
+          <div class="schedule-card">
+            <div class="schedule-icon">◯◯</div>
+            <h3>Akad Nikah</h3>
+            <p id="akadTime"></p>
+          </div>
+
+          <div class="schedule-line"></div>
+
+          <div class="schedule-card">
+            <div class="schedule-icon">♨</div>
+            <h3>Majlis Santapan</h3>
+            <p id="receptionTime"></p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- LOKASI -->
+    <section class="content-section reveal-section">
+
+      <div class="section-card location-card">
+
+        <p class="section-kicker">LOKASI MAJLIS</p>
+
+        <div class="location-pin">⌖</div>
+
+        <h2 id="venueName"></h2>
+        <p class="venue-location" id="venueLocation"></p>
+
+        <a
+          class="map-button"
+          id="mapButton"
+          href="#"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          BUKA GOOGLE MAPS
+        </a>
+
+      </div>
+    </section>
+
+  </main>
+  <audio id="weddingMusic" preload="auto"></audio>
+
+  <button
+    class="music-control"
+    id="musicControl"
+    type="button"
+    aria-label="Main atau hentikan muzik"
+  >
+    ♫
+  </button>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
