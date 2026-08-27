@@ -1422,3 +1422,10 @@ body {
     opacity: 0;
   }
 }
+.hero-spark {
+  width: 14px !important;
+  height: 14px !important;
+  background: red !important;
+  opacity: 1 !important;
+  z-index: 20 !important;
+}
