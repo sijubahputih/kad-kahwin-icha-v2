@@ -1,0 +1,762 @@
+:root {
+  --ivory: #fffaf8;
+  --soft-pink: #f7dde4;
+  --pink: #d87f94;
+  --deep-pink: #b85e74;
+  --champagne: #d4af78;
+  --dark: #4b383d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: var(--ivory);
+  color: var(--dark);
+}
+
+
+/* =========================
+   PAGE 1
+========================= */
+
+.opening {
+  position: fixed;
+  inset: 0;
+
+  min-height: 100svh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 12%,
+      rgba(247, 221, 228, .95),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 88%,
+      rgba(249, 230, 234, .95),
+      transparent 32%
+    ),
+    linear-gradient(
+      145deg,
+      #fffaf8,
+      #fff1f4
+    );
+
+  z-index: 1000;
+}
+
+.opening-frame {
+  position: absolute;
+
+  inset: 18px;
+
+  border:
+    1.5px solid
+    rgba(212, 175, 120, .85);
+
+  border-radius:
+    42px 8px 42px 8px;
+
+  pointer-events: none;
+}
+
+.opening-frame::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 8px;
+
+  border:
+    1px solid
+    rgba(212, 175, 120, .35);
+
+  border-radius:
+    34px 6px 34px 6px;
+}
+
+.opening-content {
+  position: relative;
+
+  width: min(88%, 520px);
+
+  padding: 50px 24px;
+
+  text-align: center;
+
+  z-index: 3;
+}
+
+.bismillah {
+  font-family: "Amiri", serif;
+
+  color: var(--champagne);
+
+  font-size:
+    clamp(27px, 7vw, 42px);
+
+  margin-bottom: 26px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+
+  letter-spacing: 5px;
+
+  font-size: 13px;
+
+  font-weight: 500;
+}
+
+.wedding-title {
+  margin: 0 0 18px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(30px, 8vw, 48px);
+
+  letter-spacing: 3px;
+}
+
+.divider {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  color: var(--champagne);
+
+  margin-bottom: 28px;
+}
+
+.divider span {
+  width: 58px;
+  height: 1px;
+
+  background:
+    var(--champagne);
+}
+
+.couple-name {
+  margin: 14px 0;
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  font-size:
+    clamp(50px, 13vw, 82px);
+
+  line-height: .95;
+
+  font-weight: 400;
+
+  color: var(--deep-pink);
+}
+
+.ampersand {
+  margin: 4px 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 44px;
+
+  color: var(--champagne);
+}
+
+.opening-date {
+  margin: 32px 0 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color: var(--champagne);
+}
+
+.open-btn {
+  padding: 14px 32px;
+
+  border-radius: 100px;
+
+  border:
+    1px solid
+    rgba(184, 94, 116, .45);
+
+  background:
+    rgba(255, 255, 255, .58);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: var(--deep-pink);
+
+  font-family:
+    "Montserrat",
+    sans-serif;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 12px 32px
+    rgba(184, 94, 116, .16);
+
+  transition: .3s ease;
+}
+
+.open-btn:hover {
+  transform:
+    translateY(-2px)
+    scale(1.03);
+}
+
+.tap-note {
+  position: absolute;
+
+  bottom: 28px;
+
+  margin: 0;
+
+  font-size: 10px;
+
+  letter-spacing: 2px;
+
+  color: #a58389;
+}
+
+
+/* =========================
+   PAGE OPEN ANIMATION
+========================= */
+
+.opening.is-opening {
+  animation:
+    openPage 1.25s
+    cubic-bezier(.7, 0, .2, 1)
+    forwards;
+}
+
+@keyframes openPage {
+
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  65% {
+    opacity: .95;
+    transform: scale(1.08);
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1.4);
+    visibility: hidden;
+  }
+}
+
+
+/* =========================
+   PAGE 2
+========================= */
+
+.main-page {
+  display: none;
+
+  min-height: 100vh;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fffaf8,
+      #fff0f3
+    );
+}
+
+.main-page.show {
+  display: block;
+}
+
+.hero {
+  min-height: 100svh;
+
+  padding: 60px 20px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-align: center;
+}
+
+.hero-eyebrow {
+  margin-bottom: 25px;
+
+  letter-spacing: 5px;
+
+  color: var(--champagne);
+
+  font-size: 13px;
+}
+
+.hero h1 {
+  margin: 5px 0;
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  font-size:
+    clamp(52px, 13vw, 86px);
+
+  font-weight: 400;
+
+  line-height: 1;
+
+  color: var(--deep-pink);
+}
+
+.hero-and {
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 42px;
+
+  color: var(--champagne);
+
+  margin: 5px 0;
+}
+
+.hero-date {
+  margin-top: 25px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 20px;
+
+  letter-spacing: 2px;
+}
+
+.countdown {
+  width: min(100%, 390px);
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, 1fr);
+
+  gap: 8px;
+
+  margin-top: 35px;
+}
+
+.count-item {
+  padding: 14px 5px;
+
+  border-radius: 15px;
+
+  border:
+    1px solid
+    rgba(212, 175, 120, .5);
+
+  background:
+    rgba(255, 255, 255, .62);
+
+  box-shadow:
+    0 10px 26px
+    rgba(184, 94, 116, .08);
+}
+
+.count-item span {
+  display: block;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 30px;
+
+  font-weight: 600;
+
+  color: var(--deep-pink);
+}
+
+.count-item small {
+  font-size: 9px;
+
+  letter-spacing: 1px;
+
+  color: #92757b;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 430px) {
+
+  .opening-content {
+    padding:
+      40px 20px;
+  }
+
+  .bismillah {
+    margin-bottom: 20px;
+  }
+
+  .wedding-title {
+    margin-bottom: 14px;
+  }
+
+  .couple-name {
+    font-size:
+      clamp(48px, 15vw, 70px);
+  }
+
+  .countdown {
+    gap: 6px;
+  }
+
+}
+/* =========================
+   SATIN EFFECT
+========================= */
+
+.satin {
+  position: absolute;
+  right: -80px;
+  bottom: -60px;
+
+  width: 320px;
+  height: 78%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.15),
+      rgba(245,207,215,.9),
+      rgba(230,166,181,.88)
+    );
+
+  border-radius: 60% 0 0 20%;
+
+  opacity: .72;
+
+  filter: blur(1px);
+
+  transform-origin: bottom right;
+
+  animation: satinMove 7s ease-in-out infinite;
+
+  z-index: 1;
+}
+
+@keyframes satinMove {
+  0%, 100% {
+    transform:
+      rotate(-4deg)
+      translateX(0)
+      scaleY(1);
+  }
+
+  50% {
+    transform:
+      rotate(2deg)
+      translateX(-16px)
+      scaleY(1.04);
+  }
+}
+
+
+/* =========================
+   PETALS
+========================= */
+
+.petals {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+
+  z-index: 4;
+}
+
+.petal {
+  position: absolute;
+  top: -60px;
+
+  width: 18px;
+  height: 12px;
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe3ea,
+      #e9a9b9
+    );
+
+  opacity: .7;
+
+  animation:
+    petalFall linear forwards;
+}
+
+@keyframes petalFall {
+
+  0% {
+    transform:
+      translate3d(0,-10vh,0)
+      rotate(0deg);
+  }
+
+  30% {
+    transform:
+      translate3d(-20px,30vh,0)
+      rotate(110deg);
+  }
+
+  60% {
+    transform:
+      translate3d(18px,65vh,0)
+      rotate(230deg);
+  }
+
+  100% {
+    transform:
+      translate3d(-10px,110vh,0)
+      rotate(380deg);
+
+    opacity: 0;
+  }
+}
+
+
+/* =========================
+   SPARKLE
+========================= */
+
+.sparkles {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  z-index: 3;
+}
+
+.sparkle {
+  position: absolute;
+
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: var(--champagne);
+
+  box-shadow:
+    0 0 8px rgba(212,175,120,.9),
+    0 0 18px rgba(212,175,120,.45);
+
+  animation:
+    sparkleBlink 2.5s ease-in-out infinite;
+}
+
+.s1 {
+  top: 18%;
+  left: 16%;
+}
+
+.s2 {
+  top: 28%;
+  right: 18%;
+  animation-delay: .8s;
+}
+
+.s3 {
+  top: 55%;
+  left: 25%;
+  animation-delay: 1.3s;
+}
+
+.s4 {
+  bottom: 22%;
+  right: 14%;
+  animation-delay: .5s;
+}
+
+.s5 {
+  bottom: 12%;
+  left: 48%;
+  animation-delay: 1.7s;
+}
+
+@keyframes sparkleBlink {
+
+  0%,
+  100% {
+    opacity: .2;
+    transform: scale(.7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
+/* =========================
+   FLORAL CORNERS
+========================= */
+
+.floral {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  pointer-events: none;
+
+  z-index: 2;
+
+  transition: transform .2s ease-out;
+}
+
+.floral-top {
+  top: -35px;
+  right: -40px;
+
+  background-image:
+    url("floral-top.png");
+}
+
+.floral-bottom {
+  bottom: -35px;
+  left: -40px;
+
+  background-image:
+    url("floral-bottom.png");
+}
+/* =========================
+   MUSIC BUTTON
+========================= */
+
+.music-control {
+  position: fixed;
+
+  right: 20px;
+  bottom: 22px;
+
+  width: 48px;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border:
+    1px solid
+    rgba(212, 175, 120, .65);
+
+  background:
+    rgba(255, 250, 248, .72);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  color: var(--deep-pink);
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  z-index: 2000;
+
+  box-shadow:
+    0 8px 25px
+    rgba(184, 94, 116, .18);
+
+  transition:
+    transform .3s ease,
+    box-shadow .3s ease;
+}
+
+.music-control:hover {
+  transform: scale(1.08);
+}
+
+.music-control.playing {
+  animation:
+    musicPulse 2s
+    ease-in-out infinite;
+}
+
+@keyframes musicPulse {
+
+  0%,
+  100% {
+    box-shadow:
+      0 8px 25px
+      rgba(184, 94, 116, .18);
+  }
+
+  50% {
+    box-shadow:
+      0 8px 30px
+      rgba(184, 94, 116, .35),
+      0 0 18px
+      rgba(212, 175, 120, .28);
+  }
+}
