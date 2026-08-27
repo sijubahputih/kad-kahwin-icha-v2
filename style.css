@@ -1178,7 +1178,7 @@ body {
 .hero-floral {
   position: absolute;
 
-  width: 360px;
+  width: 300px;
   height: auto;
 
   object-fit: contain;
@@ -1189,13 +1189,13 @@ body {
 }
 
 .hero-floral-top {
-  top: -55px;
-  right: -45px;
+  top: 10px;
+  right: 10px;
 }
 
 .hero-floral-bottom {
-  bottom: -70px;
-  left: -45px;
+  bottom: 10px;
+  left: 10px;
 }
 
 .hero-eyebrow,
@@ -1210,16 +1210,16 @@ body {
 @media (max-width: 620px) {
 
   .hero-floral {
-    width: 190px;
+    width: 170px;
   }
 
   .hero-floral-top {
-    top: -25px;
-    right: -45px;
+    top: 10px;
+    right: 8px;
   }
 
   .hero-floral-bottom {
-    bottom: -40px;
-    left: -45px;
+    bottom: 10px;
+    left: 8px;
   }
 }
