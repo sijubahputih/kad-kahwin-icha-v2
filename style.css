@@ -1035,6 +1035,7 @@ body {
 
 .hero {
   position: relative;
+  overflow: hidden;
 
   background:
     radial-gradient(
@@ -1147,4 +1148,20 @@ body {
     letter-spacing: 2px;
   }
 
+}
+.hero-frame {
+  position: absolute;
+  inset: 18px;
+  border: 1.5px solid rgba(212,175,120,.70);
+  border-radius: 42px 8px 42px 8px;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-frame::after {
+  content: "";
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(212,175,120,.28);
+  border-radius: 34px 6px 34px 6px;
 }
