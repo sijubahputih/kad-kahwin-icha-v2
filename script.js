@@ -238,3 +238,42 @@ const revealObserver = new IntersectionObserver(
 document.querySelectorAll(".reveal-section").forEach((section) => {
   revealObserver.observe(section);
 });
+const heroPetals =
+  document.getElementById("heroPetals");
+
+function createHeroPetal() {
+
+  if (!heroPetals) return;
+
+  const petal =
+    document.createElement("span");
+
+  petal.className =
+    "hero-petal";
+
+  petal.style.left =
+    Math.random() * 100 + "%";
+
+  petal.style.animationDuration =
+    8 + Math.random() * 6 + "s";
+
+  petal.style.opacity =
+    0.3 + Math.random() * 0.35;
+
+  petal.style.width =
+    10 + Math.random() * 10 + "px";
+
+  petal.style.height =
+    7 + Math.random() * 7 + "px";
+
+  heroPetals.appendChild(petal);
+
+  setTimeout(function () {
+    petal.remove();
+  }, 15000);
+}
+
+setInterval(
+  createHeroPetal,
+  1000
+);
