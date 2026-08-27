@@ -1230,27 +1230,27 @@ body {
 .hero-satin {
   position: absolute;
 
-  right: -80px;
-  bottom: -100px;
+  right: -20px;
+  bottom: -40px;
 
-  width: 360px;
-  height: 78%;
+  width: 320px;
+  height: 72%;
 
-  border-radius: 70% 0 0 15%;
+  border-radius: 65% 0 0 18%;
 
   background:
     linear-gradient(
       120deg,
-      rgba(255,255,255,.08) 5%,
-      rgba(255,255,255,.35) 25%,
-      rgba(247,210,220,.52) 45%,
-      rgba(230,165,182,.42) 68%,
-      rgba(255,255,255,.10) 90%
+      rgba(255,255,255,.18) 0%,
+      rgba(255,255,255,.55) 22%,
+      rgba(247,190,205,.78) 45%,
+      rgba(222,145,165,.72) 67%,
+      rgba(255,255,255,.18) 100%
     );
 
-  opacity: .45;
+  opacity: .75;
 
-  filter: blur(2px);
+  filter: blur(0.5px);
 
   transform-origin: bottom right;
 
@@ -1258,10 +1258,11 @@ body {
 
   z-index: 1;
 
+  box-shadow:
+    -20px 0 40px rgba(216,127,148,.10);
+
   animation:
-    satinWave 8s
-    ease-in-out
-    infinite;
+    satinWave 4s ease-in-out infinite;
 }
 
 @keyframes satinWave {
@@ -1269,15 +1270,17 @@ body {
   0%,
   100% {
     transform:
-      rotate(-3deg)
+      rotate(-6deg)
       translateX(0)
+      scaleX(1)
       scaleY(1);
   }
 
   50% {
     transform:
-      rotate(1deg)
-      translateX(-18px)
+      rotate(4deg)
+      translateX(-45px)
+      scaleX(1.08)
       scaleY(1.03);
   }
 }
