@@ -1361,3 +1361,68 @@ body {
     transform: scale(1.6);
   }
 }
+/* =========================
+   PAGE 2 PETALS
+========================= */
+
+.hero-petals {
+  position: absolute;
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+  z-index: 3;
+}
+
+.hero-petal {
+  position: absolute;
+  top: -40px;
+
+  width: 14px;
+  height: 10px;
+
+  border-radius:
+    70% 30% 70% 30%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ffe5eb,
+      #e9a9b9
+    );
+
+  opacity: .55;
+
+  animation:
+    heroPetalFall linear forwards;
+}
+
+@keyframes heroPetalFall {
+
+  0% {
+    transform:
+      translate3d(0,-10vh,0)
+      rotate(0deg);
+  }
+
+  30% {
+    transform:
+      translate3d(-18px,30vh,0)
+      rotate(120deg);
+  }
+
+  60% {
+    transform:
+      translate3d(16px,65vh,0)
+      rotate(240deg);
+  }
+
+  100% {
+    transform:
+      translate3d(-10px,110vh,0)
+      rotate(390deg);
+
+    opacity: 0;
+  }
+}
