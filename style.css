@@ -1286,77 +1286,83 @@ body {
 /* =========================
    PAGE 2 SPARKLES
 ========================= */
-
 .hero-sparkles {
-  position: absolute;
-  inset: 0;
+  position: absolute !important;
+  inset: 0 !important;
 
-  pointer-events: none;
-  z-index: 2;
+  pointer-events: none !important;
+
+  z-index: 5 !important;
 }
 
 .hero-spark {
-  position: absolute;
+  position: absolute !important;
 
-  width: 7px;
-  height: 7px;
+  width: 9px !important;
+  height: 9px !important;
 
-  border-radius: 50%;
+  display: block !important;
 
-  background: #d4af78;
+  border-radius: 50% !important;
+
+  background: #d4af78 !important;
+
+  opacity: 1;
 
   box-shadow:
-    0 0 8px rgba(212,175,120,.9),
-    0 0 18px rgba(212,175,120,.45);
+    0 0 8px rgba(212,175,120,.95),
+    0 0 18px rgba(212,175,120,.65),
+    0 0 30px rgba(212,175,120,.25);
 
   animation:
-    heroSparkleBlink 2.8s
+    heroSparkleBlink 2.4s
     ease-in-out
-    infinite;
+    infinite !important;
 }
 
 .hs1 {
-  top: 18%;
-  left: 16%;
+  top: 17% !important;
+  left: 16% !important;
 }
 
 .hs2 {
-  top: 28%;
-  right: 18%;
-  animation-delay: .7s;
+  top: 27% !important;
+  right: 18% !important;
+  animation-delay: .5s !important;
 }
 
 .hs3 {
-  top: 55%;
-  left: 22%;
-  animation-delay: 1.2s;
+  top: 53% !important;
+  left: 23% !important;
+  animation-delay: 1s !important;
 }
 
 .hs4 {
-  bottom: 22%;
-  right: 15%;
-  animation-delay: .4s;
+  bottom: 20% !important;
+  right: 17% !important;
+  animation-delay: 1.4s !important;
 }
 
 .hs5 {
-  bottom: 13%;
-  left: 52%;
-  animation-delay: 1.8s;
+  bottom: 12% !important;
+  left: 50% !important;
+  animation-delay: .8s !important;
 }
 
 @keyframes heroSparkleBlink {
 
   0%,
   100% {
-    opacity: .2;
-    transform: scale(.7);
+    opacity: .18;
+    transform: scale(.65);
   }
 
   50% {
     opacity: 1;
-    transform: scale(1.6);
+    transform: scale(1.8);
   }
 }
+
 /* =========================
    PAGE 2 PETALS
 ========================= */
