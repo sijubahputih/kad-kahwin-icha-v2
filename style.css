@@ -1223,3 +1223,61 @@ body {
     left: 8px;
   }
 }
+/* =========================
+   PAGE 2 SATIN
+========================= */
+
+.hero-satin {
+  position: absolute;
+
+  right: -80px;
+  bottom: -100px;
+
+  width: 360px;
+  height: 78%;
+
+  border-radius: 70% 0 0 15%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.08) 5%,
+      rgba(255,255,255,.35) 25%,
+      rgba(247,210,220,.52) 45%,
+      rgba(230,165,182,.42) 68%,
+      rgba(255,255,255,.10) 90%
+    );
+
+  opacity: .45;
+
+  filter: blur(2px);
+
+  transform-origin: bottom right;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  animation:
+    satinWave 8s
+    ease-in-out
+    infinite;
+}
+
+@keyframes satinWave {
+
+  0%,
+  100% {
+    transform:
+      rotate(-3deg)
+      translateX(0)
+      scaleY(1);
+  }
+
+  50% {
+    transform:
+      rotate(1deg)
+      translateX(-18px)
+      scaleY(1.03);
+  }
+}
