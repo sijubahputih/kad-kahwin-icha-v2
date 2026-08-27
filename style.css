@@ -1460,23 +1460,11 @@ body {
 }
 
 .twinkle-dot {
-  position: absolute;
-
-  display: block;
-
-  width: 10px;
-  height: 10px;
-
-  border-radius: 50%;
-
-  background: #d7ae68;
-
-  box-shadow:
-    0 0 8px rgba(215,174,104,.95),
-    0 0 18px rgba(215,174,104,.7),
-    0 0 30px rgba(215,174,104,.35);
-
-  animation: twinkleChampagne 2.2s ease-in-out infinite;
+  background: blue !important;
+width: 30px !important;
+height: 30px !important;
+opacity: 1 !important;
+animation: none !important;
 }
 
 .t1 {
