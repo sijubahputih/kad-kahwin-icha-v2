@@ -1206,3 +1206,20 @@ body {
     transform: translateY(-8px) rotate(1deg);
   }
 }
+@media (max-width: 620px) {
+
+  .hero-floral {
+    width: 190px;
+    height: 190px;
+  }
+
+  .hero-floral-top {
+    top: -35px;
+    right: -50px;
+  }
+
+  .hero-floral-bottom {
+    bottom: -45px;
+    left: -50px;
+  }
+}
