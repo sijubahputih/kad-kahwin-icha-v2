@@ -1483,22 +1483,6 @@ body {
   pointer-events: none !important;
 }
 
-.twinkle-dot {
-  position: absolute !important;
-  display: block !important;
-
-  width: 30px !important;
-  height: 30px !important;
-
-  background: blue !important;
-
-  border-radius: 50% !important;
-
-  opacity: 1 !important;
-
-  animation: none !important;
-}
-
 .t1 {
   top: 100px !important;
   left: 100px !important;
