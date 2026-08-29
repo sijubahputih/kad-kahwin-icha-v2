@@ -1527,3 +1527,55 @@ body {
     transform: scale(1);
   }
 }
+.champagne-twinkles {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 99999 !important;
+  pointer-events: none !important;
+}
+
+.twinkle-dot {
+  position: absolute !important;
+  display: block !important;
+
+  width: 30px !important;
+  height: 30px !important;
+
+  background: blue !important;
+
+  border-radius: 50% !important;
+
+  opacity: 1 !important;
+
+  animation: none !important;
+}
+
+.t1 {
+  top: 100px !important;
+  left: 100px !important;
+}
+
+.t2 {
+  top: 100px !important;
+  right: 100px !important;
+}
+
+.t3 {
+  top: 50% !important;
+  left: 150px !important;
+}
+
+.t4 {
+  top: 50% !important;
+  right: 150px !important;
+}
+
+.t5 {
+  bottom: 100px !important;
+  left: 35% !important;
+}
+
+.t6 {
+  bottom: 100px !important;
+  right: 35% !important;
+}
