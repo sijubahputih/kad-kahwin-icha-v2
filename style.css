@@ -1459,28 +1459,27 @@ body {
   z-index: 50;
   pointer-events: none;
 }
-@keyframes twinkleChampagne {
-  0%,
-  100% {
-    opacity: .15;
-    transform: scale(.55);
-  }
 
-  45% {
-    opacity: 1;
-    transform: scale(1.7);
-  }
+.twinkle-dot {
+  position: absolute;
+  display: block;
 
-  60% {
-    opacity: .6;
-    transform: scale(1);
-  }
-}
-.champagne-twinkles {
-  position: absolute !important;
-  inset: 0 !important;
-  z-index: 99999 !important;
-  pointer-events: none !important;
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #d4af78;
+
+  box-shadow:
+    0 0 8px rgba(212,175,120,.95),
+    0 0 18px rgba(212,175,120,.65),
+    0 0 28px rgba(212,175,120,.35);
+
+  animation:
+    champagneTwinkle 2.4s
+    ease-in-out
+    infinite;
 }
 
 .t1 {
@@ -1511,4 +1510,21 @@ body {
 .t6 {
   bottom: 100px !important;
   right: 35% !important;
+}
+@keyframes twinkleChampagne {
+  0%,
+  100% {
+    opacity: .15;
+    transform: scale(.55);
+  }
+
+  45% {
+    opacity: 1;
+    transform: scale(1.7);
+  }
+
+  60% {
+    opacity: .6;
+    transform: scale(1);
+  }
 }
