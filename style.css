@@ -1511,7 +1511,7 @@ body {
   bottom: 100px !important;
   right: 35% !important;
 }
-@keyframes twinkleChampagne {
+@keyframes champagneTwinkle {
   0%,
   100% {
     opacity: .15;
