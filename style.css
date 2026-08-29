@@ -1459,58 +1459,6 @@ body {
   z-index: 50;
   pointer-events: none;
 }
-
-.twinkle-dot {
-  position: absolute !important;
-  display: block !important;
-
-  background: blue !important;
-
-  width: 30px !important;
-  height: 30px !important;
-
-  opacity: 1 !important;
-
-  border-radius: 50%;
-
-  animation: none !important;
-}
-
-.t1 {
-  top: 17%;
-  left: 16%;
-}
-
-.t2 {
-  top: 24%;
-  right: 20%;
-  animation-delay: .4s;
-}
-
-.t3 {
-  top: 49%;
-  left: 21%;
-  animation-delay: .9s;
-}
-
-.t4 {
-  bottom: 26%;
-  right: 20%;
-  animation-delay: 1.3s;
-}
-
-.t5 {
-  bottom: 14%;
-  left: 47%;
-  animation-delay: .7s;
-}
-
-.t6 {
-  top: 42%;
-  right: 9%;
-  animation-delay: 1.7s;
-}
-
 @keyframes twinkleChampagne {
   0%,
   100% {
