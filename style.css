@@ -2625,3 +2625,51 @@ body {
   }
 
 }
+/* =========================
+   PAGE 1 ALIGNMENT FIX
+========================= */
+
+.cover {
+  position: fixed !important;
+  inset: 0 !important;
+
+  width: 100% !important;
+  height: 100vh !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-align: center !important;
+}
+
+.cover-inner {
+  position: relative !important;
+
+  width: 100% !important;
+  max-width: 900px !important;
+
+  margin: 0 auto !important;
+
+  left: auto !important;
+  right: auto !important;
+
+  transform: none !important;
+
+  text-align: center !important;
+
+  z-index: 10;
+}
+.cover-satin {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+
+  width: 22%;
+  height: 100%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
