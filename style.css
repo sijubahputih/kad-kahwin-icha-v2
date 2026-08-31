@@ -662,10 +662,6 @@ body {
   width: 280px;
   height: 280px;
 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-
   pointer-events: none;
 
   z-index: 2;
@@ -674,18 +670,6 @@ body {
 .floral-top {
   top: 14px;
   right: 18px;
-
-  background-image:
-    url("./floral-top.png");
-}
-
-.floral-bottom {
-  bottom: 14px;
-  left: 18px;
-
-  background-image:
-    url("./floral-bottom.png");
-}
 
 
 /* PAGE 2 FLORAL */
@@ -2668,4 +2652,55 @@ body {
   }
 
 }
+/* =========================
+   FLORAL PAGE 1 + PAGE 2
+   EXACT SAME POSITION
+========================= */
 
+.floral,
+.hero-floral {
+  position: absolute;
+
+  width: 280px;
+  height: auto;
+
+  object-fit: contain;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
+.floral-top,
+.hero-floral-top {
+  top: 14px;
+  right: 18px;
+}
+
+.floral-bottom,
+.hero-floral-bottom {
+  bottom: 14px;
+  left: 18px;
+}
+
+  @media (max-width: 620px) {
+
+  .floral,
+  .hero-floral {
+    width: 165px;
+    height: auto;
+  }
+
+  .floral-top,
+  .hero-floral-top {
+    top: 10px;
+    right: 8px;
+  }
+
+  .floral-bottom,
+  .hero-floral-bottom {
+    bottom: 10px;
+    left: 8px;
+  }
+
+}
