@@ -670,7 +670,7 @@ body {
 .floral-top {
   top: 14px;
   right: 18px;
-
+}
 
 /* PAGE 2 FLORAL */
 
@@ -2781,4 +2781,229 @@ body {
     left: 8px;
   }
 
+}
+
+/* =========================================================
+   FINAL STABILITY OVERRIDES — 2026-09-01
+   This block intentionally wins over older duplicate rules.
+========================================================= */
+
+/* PAGE 1: keep all central content centered */
+.opening {
+  width: 100% !important;
+  min-height: 100svh !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.opening-content {
+  width: min(88%, 520px) !important;
+  margin: 0 auto !important;
+  left: auto !important;
+  right: auto !important;
+  transform: none !important;
+  text-align: center !important;
+  z-index: 10 !important;
+}
+
+/* FLORAL: works whether Page 1 uses DIV or IMG */
+.floral,
+.hero-floral {
+  position: absolute !important;
+  width: 280px !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+img.floral,
+.hero-floral {
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+.floral:not(img) {
+  height: 280px !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  background-position: center !important;
+}
+
+.floral-top:not(img) {
+  background-image: url("./floral-top.png") !important;
+}
+
+.floral-bottom:not(img) {
+  background-image: url("./floral-bottom.png") !important;
+}
+
+.floral-top,
+.hero-floral-top {
+  top: 14px !important;
+  right: 18px !important;
+}
+
+.floral-bottom,
+.hero-floral-bottom {
+  bottom: 14px !important;
+  left: 18px !important;
+}
+
+/* PAGE 2 CONTENT: restore stable card layout */
+.content-section {
+  position: relative !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  padding: 34px 18px !important;
+  display: block !important;
+  overflow: visible !important;
+  background: transparent !important;
+}
+
+.content-section::after {
+  content: none !important;
+  display: none !important;
+}
+
+.section-card {
+  position: relative !important;
+  width: min(100%, 760px) !important;
+  margin: 0 auto !important;
+  padding: 42px 26px !important;
+  text-align: center !important;
+  border: 1px solid rgba(212,175,120,.48) !important;
+  border-radius: 28px !important;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,.78),
+      rgba(255,244,247,.62)
+    ) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 22px 60px rgba(184,94,116,.10) !important;
+  overflow: hidden !important;
+}
+
+/* HERO remains a full screen page */
+.hero {
+  min-height: 100svh !important;
+  padding: 60px 20px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Remove old red sparkle debugging if old elements remain */
+.hero-spark {
+  position: absolute !important;
+  width: 9px !important;
+  height: 9px !important;
+  display: block !important;
+  border-radius: 50% !important;
+  background: #d4af78 !important;
+  opacity: 1 !important;
+  box-shadow:
+    0 0 8px rgba(212,175,120,.95),
+    0 0 18px rgba(212,175,120,.65),
+    0 0 30px rgba(212,175,120,.25) !important;
+}
+
+/* Current champagne twinkles */
+.champagne-twinkles {
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 50 !important;
+  pointer-events: none !important;
+}
+
+.twinkle-dot {
+  position: absolute !important;
+  display: block !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #d4af78 !important;
+  box-shadow:
+    0 0 8px rgba(212,175,120,.95),
+    0 0 18px rgba(212,175,120,.65),
+    0 0 28px rgba(212,175,120,.35) !important;
+  animation: champagneTwinkle 2.4s ease-in-out infinite !important;
+}
+
+/* Dress code: one final size definition */
+.color-circle {
+  width: 110px !important;
+  height: 110px !important;
+  min-width: 110px !important;
+}
+
+.color-pink {
+  background: #f7dde4 !important;
+}
+
+.color-champagne {
+  background: #d4af78 !important;
+}
+
+/* Footer */
+.wedding-footer {
+  width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+.footer-inner {
+  width: min(100%, 680px) !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  text-align: center !important;
+}
+
+/* MOBILE */
+@media (max-width: 620px) {
+  .floral,
+  .hero-floral {
+    width: 165px !important;
+  }
+
+  .floral:not(img) {
+    height: 165px !important;
+  }
+
+  .floral-top,
+  .hero-floral-top {
+    top: 10px !important;
+    right: 8px !important;
+  }
+
+  .floral-bottom,
+  .hero-floral-bottom {
+    bottom: 10px !important;
+    left: 8px !important;
+  }
+
+  .content-section {
+    min-height: 0 !important;
+    padding: 22px 14px !important;
+    display: block !important;
+  }
+
+  .section-card {
+    width: min(100%, 760px) !important;
+    padding: 34px 18px !important;
+    border-radius: 22px !important;
+  }
+
+  .color-circle {
+    width: 95px !important;
+    height: 95px !important;
+    min-width: 95px !important;
+  }
 }
