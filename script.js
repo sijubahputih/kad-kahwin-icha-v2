@@ -346,3 +346,83 @@ function renderContacts() {
 }
 
 renderContacts();
+function sendRSVP() {
+
+  const side =
+    document.getElementById("rsvpSide").value;
+
+  const name =
+    document.getElementById("rsvpName").value.trim();
+
+  const pax =
+    document.getElementById("rsvpPax").value;
+
+  const status =
+    document.getElementById("rsvpStatus").value;
+
+
+  if (!side) {
+    alert("Sila pilih pihak jemputan.");
+    return;
+  }
+
+  if (!name) {
+    alert("Sila masukkan nama anda.");
+    return;
+  }
+
+  if (!status) {
+    alert("Sila pilih status kehadiran.");
+    return;
+  }
+
+  if (status === "Hadir" && !pax) {
+    alert("Sila masukkan bilangan tetamu.");
+    return;
+  }
+
+
+  const sideText =
+    side === "groom"
+      ? "Pihak Pengantin Lelaki"
+      : "Pihak Pengantin Perempuan";
+
+
+  const phone =
+    side === "groom"
+      ? wedding.rsvpPhone.groom
+      : wedding.rsvpPhone.bride;
+
+
+  let message =
+    `Assalamualaikum, saya ingin mengesahkan kehadiran ke Majlis Walimatul Urus Haiqal & Icha.\n\n`;
+
+  message +=
+    `Jemputan: ${sideText}\n`;
+
+  message +=
+    `Nama: ${name}\n`;
+
+  message +=
+    `Status: ${status}\n`;
+
+
+  if (status === "Hadir") {
+    message +=
+      `Bilangan Tetamu: ${pax} orang\n`;
+  }
+
+
+  message +=
+    `\nTerima kasih.`;
+
+
+  const whatsappURL =
+    `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+
+
+  window.open(
+    whatsappURL,
+    "_blank"
+  );
+}
