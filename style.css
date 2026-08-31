@@ -1786,3 +1786,35 @@ body {
   }
 
 }
+.color-circle {
+  width: 110px !important;
+  height: 110px !important;
+  min-width: 110px;
+
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto 18px;
+
+  border-radius: 50%;
+
+  border: 5px solid rgba(255,255,255,.9);
+
+  box-shadow:
+    0 8px 25px rgba(90,60,70,.10),
+    0 0 0 1px rgba(212,175,120,.45);
+}
+
+.color-pink {
+  background: #F7DDE4 !important;
+}
+
+.color-champagne {
+  background: #D4AF78 !important;
+}
+
+.color-circle span {
+  color: white;
+  font-size: 30px;
+}
