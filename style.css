@@ -2556,3 +2556,66 @@ body {
   }
 
 }
+/* GLOBAL PETALS */
+
+.page-petals {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+.page-petal {
+  position: absolute;
+
+  top: -30px;
+
+  display: block;
+
+  border-radius:
+    70% 20% 70% 30%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8dce4,
+      #e7a8b8
+    );
+
+  filter:
+    blur(.15px);
+
+  animation:
+    globalPetalFall
+    linear forwards;
+}
+
+
+@keyframes globalPetalFall {
+
+  0% {
+    transform:
+      translateY(-40px)
+      translateX(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(50vh)
+      translateX(35px)
+      rotate(180deg);
+  }
+
+  100% {
+    transform:
+      translateY(110vh)
+      translateX(-25px)
+      rotate(360deg);
+  }
+
+}
