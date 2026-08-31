@@ -1587,3 +1587,180 @@ body {
     left: 150%;
   }
 }
+/* =========================
+   DRESS CODE
+========================= */
+
+.dresscode-card {
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(247,221,228,.42),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 85%,
+      rgba(212,175,120,.15),
+      transparent 30%
+    ),
+    rgba(255,255,255,.72);
+}
+
+.dresscode-intro {
+  max-width: 500px;
+
+  margin:
+    -8px auto 35px;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 19px;
+
+  line-height: 1.5;
+
+  color: #725d63;
+}
+
+
+.dresscode-grid {
+  display: grid;
+
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 30px;
+}
+
+
+.dresscode-item {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+.color-circle {
+  width: 105px;
+  height: 105px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+
+  border-radius: 50%;
+
+  border:
+    5px solid
+    rgba(255,255,255,.75);
+
+  box-shadow:
+    0 12px 35px
+    rgba(90,60,70,.12);
+
+  position: relative;
+}
+
+
+.color-circle::after {
+  content: "";
+
+  position: absolute;
+
+  inset: -9px;
+
+  border:
+    1px solid
+    rgba(212,175,120,.45);
+
+  border-radius: 50%;
+}
+
+
+.color-circle span {
+  font-size: 28px;
+
+  color:
+    rgba(255,255,255,.92);
+}
+
+
+.color-pink {
+  background:
+    linear-gradient(
+      145deg,
+      #f9e6eb,
+      #e8a9b8
+    );
+}
+
+
+.color-champagne {
+  background:
+    linear-gradient(
+      145deg,
+      #ead5ad,
+      #c69d5f
+    );
+}
+
+
+.dresscode-label {
+  min-height: 28px;
+
+  margin:
+    0 0 7px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  color: #987a81;
+}
+
+
+.dresscode-item h3 {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  color:
+    var(--deep-pink);
+}
+
+
+.color-code {
+  margin-top: 8px;
+
+  font-size: 9px;
+
+  letter-spacing: 2px;
+
+  color: #aa9096;
+}
+
+
+.dresscode-divider {
+  font-size: 22px;
+
+  color:
+    var(--champagne);
+}
