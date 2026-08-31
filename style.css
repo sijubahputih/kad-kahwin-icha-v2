@@ -2302,3 +2302,142 @@ body {
   }
 
 }
+/* =========================
+   FOOTER PENUTUP
+========================= */
+
+.wedding-footer {
+  position: relative;
+
+  padding:
+    70px 20px 90px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff3f5,
+      #f9e1e6
+    );
+}
+
+.footer-inner {
+  position: relative;
+
+  width:
+    min(100%, 650px);
+
+  margin: 0 auto;
+
+  z-index: 2;
+}
+
+.footer-kicker {
+  margin:
+    0 0 15px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  letter-spacing: 5px;
+
+  color:
+    var(--champagne);
+}
+
+.footer-inner h2 {
+  margin: 0;
+
+  font-family:
+    "Great Vibes",
+    cursive;
+
+  font-size:
+    clamp(48px, 9vw, 76px);
+
+  font-weight: 400;
+
+  color:
+    var(--deep-pink);
+}
+
+.footer-divider {
+  width: 100px;
+  height: 1px;
+
+  margin:
+    20px auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--champagne),
+      transparent
+    );
+}
+
+.footer-date {
+  margin: 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  color:
+    var(--champagne);
+}
+
+.footer-message {
+  max-width: 450px;
+
+  margin:
+    20px auto 0;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+
+  color: #6f5960;
+}
+
+.footer-symbol {
+  margin-top: 24px;
+
+  font-size: 24px;
+
+  color:
+    var(--champagne);
+}
+
+@media (max-width: 620px) {
+
+  .wedding-footer {
+    padding:
+      60px 18px 80px;
+  }
+
+  .footer-inner h2 {
+    font-size:
+      clamp(46px, 15vw, 66px);
+  }
+
+  .footer-message {
+    font-size: 17px;
+  }
+
+}
