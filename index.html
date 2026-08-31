@@ -366,7 +366,77 @@
   </div>
 
 </section>
-    
+
+    <!-- RSVP -->
+<section class="content-section reveal-section">
+
+  <div class="section-card rsvp-card">
+
+    <p class="section-kicker">
+      PENGESAHAN KEHADIRAN
+    </p>
+
+    <h2>RSVP</h2>
+
+    <p class="rsvp-intro">
+      Mohon sahkan kehadiran anda untuk membantu kami membuat persiapan majlis.
+    </p>
+
+    <div class="rsvp-form">
+
+      <label for="rsvpName">
+        Nama
+      </label>
+
+      <input
+        type="text"
+        id="rsvpName"
+        placeholder="Masukkan nama anda"
+      >
+
+      <label for="rsvpPax">
+        Bilangan Tetamu
+      </label>
+
+      <input
+        type="number"
+        id="rsvpPax"
+        min="1"
+        max="10"
+        placeholder="Contoh: 2"
+      >
+
+      <label for="rsvpStatus">
+        Status Kehadiran
+      </label>
+
+      <select id="rsvpStatus">
+        <option value="">
+          Pilih status
+        </option>
+
+        <option value="Hadir">
+          Hadir
+        </option>
+
+        <option value="Tidak Hadir">
+          Tidak Hadir
+        </option>
+      </select>
+
+      <button
+        class="rsvp-button"
+        type="button"
+        onclick="sendRSVP()"
+      >
+        HANTAR RSVP
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
   </main>
   <audio id="weddingMusic" preload="auto"></audio>
 
