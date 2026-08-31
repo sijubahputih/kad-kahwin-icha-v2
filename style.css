@@ -653,13 +653,14 @@ body {
   }
 }
 /* =========================
-   FLORAL CORNERS
+   PAGE 1 FLORAL - SAME AS PAGE 2
 ========================= */
 
 .floral {
   position: absolute;
-  width: 260px;
-  height: 260px;
+
+  width: 300px;
+  height: 300px;
 
   background-repeat: no-repeat;
   background-size: contain;
@@ -668,24 +669,41 @@ body {
   pointer-events: none;
 
   z-index: 2;
-
-  transition: transform .2s ease-out;
 }
 
 .floral-top {
-  top: -35px;
-  right: -40px;
+  top: 10px;
+  right: 10px;
 
   background-image:
-    url("floral-top.png");
+    url("./floral-top.png");
 }
 
 .floral-bottom {
-  bottom: -35px;
-  left: -40px;
+  bottom: 10px;
+  left: 10px;
 
   background-image:
-    url("floral-bottom.png");
+    url("./floral-bottom.png");
+}
+
+@media (max-width: 620px) {
+
+  .floral {
+    width: 170px;
+    height: 170px;
+  }
+
+  .floral-top {
+    top: 10px;
+    right: 8px;
+  }
+
+  .floral-bottom {
+    bottom: 10px;
+    left: 8px;
+  }
+
 }
 /* =========================
    MUSIC BUTTON
