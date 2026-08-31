@@ -31,4 +31,41 @@ const wedding = {
     father: "MOHD ZAILANI BIN KARI",
     mother: "AAINA AZURA BINTI ROSLI"
   }
+  contacts: {
+  groom: [
+    {
+      name: "Haiqal",
+      phone: "601168413075",
+      display: "011-68413075"
+    },
+    {
+      name: "Ibu Haiqal",
+      phone: "60183154970",
+      display: "018-3154970"
+    },
+    {
+      name: "Abah Haiqal",
+      phone: "60183740280",
+      display: "018-3740280"
+    }
+  ],
+
+  bride: [
+    {
+      name: "Icha",
+      phone: "60148740284",
+      display: "014-8740284"
+    },
+    {
+      name: "Ibu Icha",
+      phone: "60172564550",
+      display: "017-2564550"
+    },
+    {
+      name: "Bapa Icha",
+      phone: "60187720015",
+      display: "018-7720015"
+    }
+  ]
+}
 };
