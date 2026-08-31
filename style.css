@@ -1080,22 +1080,34 @@ body {
 }
 
 
-/* Reveal */
+/* =========================
+   PREMIUM SCROLL REVEAL
+========================= */
 
 .reveal-section {
   opacity: 0;
-  transform: translateY(28px);
+
+  transform:
+    translateY(45px)
+    scale(.97);
+
+  filter: blur(4px);
 
   transition:
-    opacity .8s ease,
-    transform .8s ease;
+    opacity 1s ease,
+    transform 1s cubic-bezier(.22, 1, .36, 1),
+    filter .8s ease;
 }
 
 .reveal-section.is-visible {
   opacity: 1;
-  transform: translateY(0);
-}
 
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter: blur(0);
+}
 
 /* Mobile */
 
@@ -1526,5 +1538,52 @@ body {
   60% {
     opacity: .6;
     transform: scale(1);
+  }
+}
+.section-card {
+  position: relative;
+  overflow: hidden;
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+.section-card::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent,
+      rgba(255,255,255,.45),
+      transparent
+    );
+
+  transform: skewX(-18deg);
+
+  pointer-events: none;
+
+  animation:
+    cardShimmer 8s ease-in-out infinite;
+}
+
+@keyframes cardShimmer {
+
+  0%,
+  70% {
+    left: -120%;
+  }
+
+  90%,
+  100% {
+    left: 150%;
   }
 }
