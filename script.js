@@ -277,3 +277,72 @@ setInterval(
   createHeroPetal,
   1000
 );
+function renderContacts() {
+
+  const groomContainer =
+    document.getElementById("groomContacts");
+
+  const brideContainer =
+    document.getElementById("brideContacts");
+
+
+  wedding.contacts.groom.forEach(function(contact) {
+
+    const link =
+      document.createElement("a");
+
+    link.className =
+      "contact-button";
+
+    link.href =
+      "https://wa.me/" + contact.phone;
+
+    link.target =
+      "_blank";
+
+    link.innerHTML =
+      `
+      <span class="contact-icon">☎</span>
+
+      <span class="contact-info">
+        <strong>${contact.name}</strong>
+        <small>${contact.display}</small>
+      </span>
+      `;
+
+    groomContainer.appendChild(link);
+
+  });
+
+
+  wedding.contacts.bride.forEach(function(contact) {
+
+    const link =
+      document.createElement("a");
+
+    link.className =
+      "contact-button";
+
+    link.href =
+      "https://wa.me/" + contact.phone;
+
+    link.target =
+      "_blank";
+
+    link.innerHTML =
+      `
+      <span class="contact-icon">☎</span>
+
+      <span class="contact-info">
+        <strong>${contact.name}</strong>
+        <small>${contact.display}</small>
+      </span>
+      `;
+
+    brideContainer.appendChild(link);
+
+  });
+
+}
+
+renderContacts();
