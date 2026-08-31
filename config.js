@@ -22,6 +22,11 @@ const wedding = {
   location: "KOTA DAMANSARA, SELANGOR",
   maps: "https://maps.app.goo.gl/CvdHNXxJkoVAETxf9",
 
+  rsvpPhone: {
+  groom: "601168413075",
+  bride: "60148740284"
+},
+
   groomParents: {
     father: "NAZRI BIN SABRI",
     mother: "HALIJAH BINTI MAT SUJAK"
