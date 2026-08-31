@@ -426,3 +426,68 @@ function sendRSVP() {
     "_blank"
   );
 }
+// =============================
+// GLOBAL PAGE 2 PETALS
+// =============================
+
+const pagePetals =
+  document.getElementById("pagePetals");
+
+
+function createPagePetal() {
+
+  if (!pagePetals) return;
+
+
+  const petal =
+    document.createElement("span");
+
+
+  petal.className =
+    "page-petal";
+
+
+  petal.style.left =
+    Math.random() * 100 + "%";
+
+
+  petal.style.animationDuration =
+    9 + Math.random() * 7 + "s";
+
+
+  petal.style.animationDelay =
+    Math.random() * 2 + "s";
+
+
+  petal.style.opacity =
+    0.18 + Math.random() * 0.25;
+
+
+  const size =
+    7 + Math.random() * 8;
+
+
+  petal.style.width =
+    size + "px";
+
+
+  petal.style.height =
+    size * 0.65 + "px";
+
+
+  pagePetals.appendChild(petal);
+
+
+  setTimeout(function () {
+
+    petal.remove();
+
+  }, 18000);
+
+}
+
+
+setInterval(
+  createPagePetal,
+  1300
+);
