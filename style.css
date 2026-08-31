@@ -1955,3 +1955,17 @@ body {
 
   font-size: 22px;
 }
+@media (max-width: 620px) {
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+
+    gap: 24px;
+  }
+
+  .contact-divider {
+    transform:
+      rotate(90deg);
+  }
+
+}
