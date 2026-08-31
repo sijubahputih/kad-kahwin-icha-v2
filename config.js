@@ -30,7 +30,7 @@ const wedding = {
   brideParents: {
     father: "MOHD ZAILANI BIN KARI",
     mother: "AAINA AZURA BINTI ROSLI"
-  }
+  },
   contacts: {
   groom: [
     {
