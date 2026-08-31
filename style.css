@@ -653,30 +653,72 @@ body {
   }
 }
 /* =========================
-   PAGE 1 FLORAL - SAME AS PAGE 2
+   PAGE 1 FLORAL
 ========================= */
 
-.floral,
-.hero-floral {
+.floral {
+  position: absolute;
+
   width: 280px;
-  height: auto;
+  height: 280px;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  pointer-events: none;
+
+  z-index: 2;
 }
 
-.floral-top,
+.floral-top {
+  top: 14px;
+  right: 18px;
+
+  background-image:
+    url("./floral-top.png");
+}
+
+.floral-bottom {
+  bottom: 14px;
+  left: 18px;
+
+  background-image:
+    url("./floral-bottom.png");
+}
+
+
+/* PAGE 2 FLORAL */
+
+.hero-floral {
+  position: absolute;
+
+  width: 280px;
+  height: auto;
+
+  object-fit: contain;
+
+  pointer-events: none;
+
+  z-index: 2;
+}
+
 .hero-floral-top {
   top: 14px;
   right: 18px;
 }
 
-.floral-bottom,
 .hero-floral-bottom {
   bottom: 14px;
   left: 18px;
 }
-
 @media (max-width: 620px) {
 
-  .floral,
+  .floral {
+    width: 165px;
+    height: 165px;
+  }
+
   .hero-floral {
     width: 165px;
   }
@@ -692,6 +734,7 @@ body {
     bottom: 10px;
     left: 8px;
   }
+
 }
 /* =========================
    MUSIC BUTTON
@@ -2625,51 +2668,4 @@ body {
   }
 
 }
-/* =========================
-   PAGE 1 ALIGNMENT FIX
-========================= */
 
-.cover {
-  position: fixed !important;
-  inset: 0 !important;
-
-  width: 100% !important;
-  height: 100vh !important;
-
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-
-  text-align: center !important;
-}
-
-.cover-inner {
-  position: relative !important;
-
-  width: 100% !important;
-  max-width: 900px !important;
-
-  margin: 0 auto !important;
-
-  left: auto !important;
-  right: auto !important;
-
-  transform: none !important;
-
-  text-align: center !important;
-
-  z-index: 10;
-}
-.cover-satin {
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  width: 22%;
-  height: 100%;
-
-  z-index: 1;
-
-  pointer-events: none;
-}
