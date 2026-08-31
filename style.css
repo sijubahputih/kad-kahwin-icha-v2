@@ -1764,3 +1764,25 @@ body {
   color:
     var(--champagne);
 }
+@media (max-width: 620px) {
+
+  .dresscode-grid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .dresscode-divider {
+    transform: rotate(90deg);
+  }
+
+  .color-circle {
+    width: 95px;
+    height: 95px;
+  }
+
+  .dresscode-label {
+    min-height: 0;
+  }
+
+}
