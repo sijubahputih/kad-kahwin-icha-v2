@@ -3447,3 +3447,320 @@ img.floral,
   }
 
 }
+/* =========================================================
+   FOOTER PENUTUP - FRAME + FLORAL BESAR
+========================================================= */
+
+.wedding-footer {
+  position: relative !important;
+  isolation: isolate !important;
+
+  width: 100% !important;
+  min-height: 82vh !important;
+
+  padding: 110px 24px 105px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  text-align: center !important;
+
+  overflow: hidden !important;
+
+  background:
+    url("./floral-top.png") top 12px right 15px / 320px auto no-repeat,
+    url("./floral-bottom.png") bottom 10px left 12px / 350px auto no-repeat,
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(247,221,228,.58),
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(250,225,232,.68),
+      transparent 34%
+    ),
+    linear-gradient(
+      180deg,
+      #fffaf8 0%,
+      #fff1f4 100%
+    ) !important;
+}
+
+
+/* FRAME LUAR */
+
+.wedding-footer::after {
+  content: "" !important;
+
+  position: absolute !important;
+
+  inset: 14px !important;
+
+  border:
+    1.5px solid
+    rgba(212,175,120,.65) !important;
+
+  border-radius:
+    40px 10px 40px 10px !important;
+
+  pointer-events: none !important;
+
+  z-index: 1 !important;
+}
+
+
+/* FRAME DALAM */
+
+.wedding-footer::before {
+  content: "" !important;
+
+  position: absolute !important;
+
+  inset: 22px !important;
+
+  border:
+    1px solid
+    rgba(212,175,120,.24) !important;
+
+  border-radius:
+    32px 7px 32px 7px !important;
+
+  pointer-events: none !important;
+
+  z-index: 1 !important;
+}
+
+
+/* CONTENT */
+
+.footer-inner {
+  position: relative !important;
+
+  width:
+    min(100%, 680px) !important;
+
+  margin:
+    0 auto !important;
+
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+
+  text-align: center !important;
+
+  z-index: 4 !important;
+}
+
+
+/* TERIMA KASIH */
+
+.footer-kicker {
+  margin:
+    0 0 18px !important;
+
+  font-family:
+    "Montserrat",
+    sans-serif !important;
+
+  font-size: 11px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 5px !important;
+
+  color:
+    var(--champagne) !important;
+}
+
+
+/* NAMA */
+
+.footer-inner h2 {
+  margin:
+    0 !important;
+
+  font-family:
+    "Great Vibes",
+    cursive !important;
+
+  font-size:
+    clamp(58px, 8vw, 96px) !important;
+
+  line-height: 1 !important;
+
+  font-weight: 400 !important;
+
+  color:
+    var(--deep-pink) !important;
+}
+
+
+/* DIVIDER */
+
+.footer-divider {
+  width: 130px !important;
+  height: 1px !important;
+
+  margin:
+    26px auto !important;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--champagne),
+      transparent
+    ) !important;
+}
+
+
+/* TARIKH */
+
+.footer-date {
+  margin:
+    0 !important;
+
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
+
+  font-size: 18px !important;
+
+  font-weight: 600 !important;
+
+  letter-spacing: 4px !important;
+
+  color:
+    var(--champagne) !important;
+}
+
+
+/* AYAT PENUTUP */
+
+.footer-message {
+  max-width: 500px !important;
+
+  margin:
+    24px auto 0 !important;
+
+  font-family:
+    "Cormorant Garamond",
+    serif !important;
+
+  font-size: 20px !important;
+
+  line-height: 1.6 !important;
+
+  color:
+    #6f5960 !important;
+}
+
+
+/* HEART */
+
+.footer-symbol {
+  margin-top:
+    26px !important;
+
+  font-size: 27px !important;
+
+  color:
+    var(--champagne) !important;
+
+  animation:
+    footerHeart 2.2s
+    ease-in-out infinite;
+}
+
+
+@keyframes footerHeart {
+
+  0%,
+  100% {
+    opacity: .6;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .wedding-footer {
+    min-height: 74vh !important;
+
+    padding:
+      90px 22px 85px !important;
+
+    background:
+      url("./floral-top.png") top 7px right 5px / 180px auto no-repeat,
+      url("./floral-bottom.png") bottom 6px left 4px / 200px auto no-repeat,
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(247,221,228,.58),
+        transparent 32%
+      ),
+      radial-gradient(
+        circle at 12% 85%,
+        rgba(250,225,232,.68),
+        transparent 34%
+      ),
+      linear-gradient(
+        180deg,
+        #fffaf8 0%,
+        #fff1f4 100%
+      ) !important;
+  }
+
+
+  .wedding-footer::after {
+    inset: 8px !important;
+
+    border-radius:
+      28px 6px 28px 6px !important;
+  }
+
+
+  .wedding-footer::before {
+    inset: 14px !important;
+
+    border-radius:
+      22px 5px 22px 5px !important;
+  }
+
+
+  .footer-inner h2 {
+    font-size:
+      clamp(52px, 16vw, 72px) !important;
+  }
+
+
+  .footer-date {
+    font-size:
+      15px !important;
+
+    letter-spacing:
+      3px !important;
+  }
+
+
+  .footer-message {
+    max-width:
+      82% !important;
+
+    font-size:
+      17px !important;
+  }
+
+}
