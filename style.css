@@ -4152,14 +4152,16 @@ img.floral,
   }
 
 }
+
 /* =========================================================
-   PAGE 1 - NAMA PENGANTIN FONT FINAL
+   PAGE 1 - FONT NAMA PENGANTIN FINAL
 ========================================================= */
 
-.opening .couple-name {
-  font-family: "Cormorant Garamond", serif !important;
+#openingGroom,
+#openingBride {
+  font-family: "Cormorant Garamond", Georgia, serif !important;
 
-  font-size: clamp(46px, 10vw, 72px) !important;
+  font-size: clamp(48px, 11vw, 76px) !important;
 
   font-weight: 600 !important;
 
@@ -4172,24 +4174,15 @@ img.floral,
   color: var(--deep-pink) !important;
 }
 .opening .ampersand {
-  font-family: "Cormorant Garamond", serif !important;
+  font-family: "Cormorant Garamond", Georgia, serif !important;
 
   font-size: 38px !important;
 
-  font-style: italic !important;
-
   font-weight: 400 !important;
+
+  font-style: italic !important;
 
   color: var(--champagne) !important;
 
   margin: 8px 0 !important;
-}
-/* TEST FONT PAGE 1 - PAKSA BERUBAH */
-
-.opening .couple-name {
-  font-family: Arial, sans-serif !important;
-  font-size: 60px !important;
-  font-weight: 700 !important;
-  font-style: normal !important;
-  letter-spacing: 2px !important;
 }
