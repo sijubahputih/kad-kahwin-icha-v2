@@ -1,13 +1,9 @@
 const wedding = {
-  groom: {
-    fullName: "NOR ALIF HAIQAL BIN MOHD NAZRI",
-    shortName: "Haiqal"
-  },
+  groom: "NOR ALIF HAIQAL BIN MOHD NAZRI",
+bride: "ARIESYAA ARYANA BINTI MOHD ZAILANI",
 
-  bride: {
-    fullName: "ARIESYAA ARYANA BINTI MOHD ZAILANI",
-    shortName: "Icha"
-  },
+groomShort: "Haiqal",
+brideShort: "Icha",
 
   dateText: "19 Disember 2026",
   dateShort: "19.12.2026",
