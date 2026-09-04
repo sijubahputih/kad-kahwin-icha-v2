@@ -4219,3 +4219,39 @@ img.floral,
 .opening .bismillah {
   margin-top: 12px;
 }
+/* =========================================================
+   PAGE 2 SECTION - LAYER FIX
+   Floral di hadapan frame
+========================================================= */
+
+/* Section mesti jadi reference untuk absolute element */
+.content-section {
+  position: relative;
+  isolation: isolate;
+}
+
+/* Frame paling belakang */
+.content-section .section-frame {
+  position: absolute;
+  z-index: 1 !important;
+  pointer-events: none;
+}
+
+/* Satin di belakang */
+.content-section .section-satin {
+  z-index: 2 !important;
+  pointer-events: none;
+}
+
+/* Floral DI HADAPAN frame */
+.content-section .section-floral {
+  position: absolute;
+  z-index: 5 !important;
+  pointer-events: none;
+}
+
+/* Isi/text di atas semuanya */
+.content-section .section-card {
+  position: relative;
+  z-index: 10 !important;
+}
