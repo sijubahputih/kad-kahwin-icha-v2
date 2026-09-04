@@ -4171,3 +4171,16 @@ img.floral,
 
   color: var(--deep-pink) !important;
 }
+.opening .ampersand {
+  font-family: "Cormorant Garamond", serif !important;
+
+  font-size: 38px !important;
+
+  font-style: italic !important;
+
+  font-weight: 400 !important;
+
+  color: var(--champagne) !important;
+
+  margin: 8px 0 !important;
+}
