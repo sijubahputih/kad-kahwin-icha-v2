@@ -4359,3 +4359,36 @@ img.floral,
     letter-spacing: .7px !important;
   }
 }
+/* DESKTOP */
+.footer-couple-name span {
+  display: inline;
+}
+
+
+/* MOBILE */
+@media (max-width: 620px) {
+
+  .footer-couple-name {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+
+    font-size: 58px !important;
+    line-height: .9 !important;
+  }
+
+  .footer-couple-name span {
+    display: block !important;
+  }
+
+  .footer-couple-name .footer-ampersand {
+    font-size: 38px !important;
+
+    margin:
+      7px 0 5px !important;
+
+    color:
+      var(--champagne) !important;
+  }
+
+}
