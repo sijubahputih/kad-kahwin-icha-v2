@@ -4181,3 +4181,41 @@ img.floral,
   line-height: 1 !important;
   margin: 6px 0 !important;
 }
+/* =========================================================
+   PAGE 1 - FINAL POLISH
+========================================================= */
+
+/* Nama pengantin */
+#openingGroom,
+#openingBride {
+  margin: 0 !important;
+  line-height: .95 !important;
+}
+
+/* Simbol & */
+.opening .ampersand {
+  margin: 4px 0 2px !important;
+  line-height: .9 !important;
+}
+
+/* Tarikh */
+.opening-date {
+  margin-top: 30px !important;
+  margin-bottom: 24px !important;
+}
+
+/* Butang */
+.open-btn {
+  min-width: 240px;
+  padding: 15px 30px;
+  letter-spacing: 2px;
+}
+
+/* Content utama */
+.opening-content {
+  position: relative;
+  z-index: 10;
+}
+.opening .bismillah {
+  margin-top: 12px;
+}
