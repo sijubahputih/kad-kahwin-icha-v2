@@ -3299,3 +3299,151 @@ img.floral,
   }
 
 }
+/* =========================================================
+   FINAL PAGE 2 SECTION FRAME + FLORAL
+   JEMPUTAN / ATUR CARA / LOKASI / DRESS CODE /
+   CONTACT / RSVP / DOA
+========================================================= */
+
+.content-section {
+  position: relative !important;
+  isolation: isolate !important;
+
+  width: 100% !important;
+  min-height: 0 !important;
+
+  padding: 52px 24px !important;
+
+  display: block !important;
+
+  overflow: hidden !important;
+
+  background:
+    url("./floral-top.png") top 14px right 18px / 190px auto no-repeat,
+    url("./floral-bottom.png") bottom 14px left 18px / 190px auto no-repeat,
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(247,221,228,.42),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(250,233,237,.55),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #fffaf8,
+      #fff3f5
+    ) !important;
+}
+
+
+/* FRAME LUAR */
+
+.content-section::after {
+  content: "" !important;
+
+  display: block !important;
+
+  position: absolute !important;
+
+  inset: 14px !important;
+
+  border:
+    1.5px solid
+    rgba(212,175,120,.58) !important;
+
+  border-radius:
+    36px 8px 36px 8px !important;
+
+  pointer-events: none !important;
+
+  z-index: 1 !important;
+}
+
+
+/* FRAME DALAM */
+
+.content-section::before {
+  content: "" !important;
+
+  display: block !important;
+
+  position: absolute !important;
+
+  inset: 21px !important;
+
+  border:
+    1px solid
+    rgba(212,175,120,.22) !important;
+
+  border-radius:
+    29px 6px 29px 6px !important;
+
+  pointer-events: none !important;
+
+  z-index: 1 !important;
+}
+
+
+/* CARD KEKAL DI ATAS FLORAL & FRAME */
+
+.content-section .section-card {
+  position: relative !important;
+
+  width:
+    min(100%, 760px) !important;
+
+  margin:
+    0 auto !important;
+
+  z-index: 3 !important;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 620px) {
+
+  .content-section {
+    padding:
+      38px 14px !important;
+
+    background:
+      url("./floral-top.png") top 8px right 6px / 115px auto no-repeat,
+      url("./floral-bottom.png") bottom 8px left 6px / 115px auto no-repeat,
+      radial-gradient(
+        circle at 85% 15%,
+        rgba(247,221,228,.42),
+        transparent 28%
+      ),
+      radial-gradient(
+        circle at 12% 85%,
+        rgba(250,233,237,.55),
+        transparent 30%
+      ),
+      linear-gradient(
+        180deg,
+        #fffaf8,
+        #fff3f5
+      ) !important;
+  }
+
+
+  .content-section::after {
+    inset: 8px !important;
+
+    border-radius:
+      26px 6px 26px 6px !important;
+  }
+
+
+  .content-section::before {
+    inset: 14px !important;
+
+    border-radius:
+      21px 5px 21px 5px !important;
+  }
+
+}
