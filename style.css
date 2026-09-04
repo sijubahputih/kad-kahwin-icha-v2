@@ -4297,3 +4297,32 @@ img.floral,
     z-index: 10 !important;
   }
 }
+/* =========================================================
+   MOBILE - ELAK SECTION CARD TINDIH FLORAL
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .content-section {
+    padding:
+      48px 22px !important;
+  }
+
+  .content-section .section-card {
+    width:
+      calc(100% - 34px) !important;
+
+    max-width:
+      720px !important;
+
+    margin:
+      0 auto !important;
+
+    padding:
+      34px 18px !important;
+
+    border-radius:
+      24px !important;
+  }
+
+}
