@@ -4326,3 +4326,36 @@ img.floral,
   }
 
 }
+/* =========================================================
+   MOBILE - COUNTDOWN LEBIH KECIL
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .countdown {
+    width: 88% !important;
+    max-width: 340px !important;
+
+    margin-left: auto !important;
+    margin-right: auto !important;
+
+    gap: 7px !important;
+  }
+
+  .count-item {
+    min-width: 0 !important;
+    padding: 12px 6px !important;
+
+    border-radius: 12px !important;
+  }
+
+  .count-item span {
+    font-size: 22px !important;
+    line-height: 1 !important;
+  }
+
+  .count-item small {
+    font-size: 8px !important;
+    letter-spacing: .7px !important;
+  }
+}
