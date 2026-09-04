@@ -3153,3 +3153,149 @@ img.floral,
   }
 
 }
+/* =========================================================
+   DECORATION UNTUK SEMUA SECTION PAGE 2
+   JEMPUTAN / ATUR CARA / LOKASI / DRESS CODE /
+   CONTACT / RSVP / DOA
+========================================================= */
+
+.content-section {
+  position: relative;
+  isolation: isolate;
+
+  /* Kekalkan layout asal */
+  padding: 52px 24px;
+
+  /* Floral + background */
+  background-image:
+    url("./floral-top.png"),
+    url("./floral-bottom.png"),
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(247,221,228,.42),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 12% 85%,
+      rgba(250,233,237,.55),
+      transparent 30%
+    ),
+    linear-gradient(
+      180deg,
+      #fffaf8,
+      #fff3f5
+    );
+
+  background-repeat:
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat,
+    no-repeat;
+
+  background-position:
+    top 14px right 18px,
+    bottom 14px left 18px,
+    center,
+    center,
+    center;
+
+  background-size:
+    190px auto,
+    190px auto,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+
+  overflow: hidden;
+}
+
+
+/* FRAME CHAMPAGNE */
+
+.content-section::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 14px;
+
+  border:
+    1.5px solid
+    rgba(212,175,120,.55);
+
+  border-radius:
+    36px 8px 36px 8px;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* FRAME DALAM */
+
+.content-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 21px;
+
+  border:
+    1px solid
+    rgba(212,175,120,.20);
+
+  border-radius:
+    29px 6px 29px 6px;
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* Pastikan card berada atas frame & floral */
+
+.content-section .section-card {
+  position: relative;
+  z-index: 3;
+}
+@media (max-width: 620px) {
+
+  .content-section {
+    padding:
+      38px 14px;
+
+    background-position:
+      top 8px right 6px,
+      bottom 8px left 6px,
+      center,
+      center,
+      center;
+
+    background-size:
+      115px auto,
+      115px auto,
+      100% 100%,
+      100% 100%,
+      100% 100%;
+  }
+
+
+  .content-section::after {
+    inset: 8px;
+
+    border-radius:
+      26px 6px 26px 6px;
+  }
+
+
+  .content-section::before {
+    inset: 14px;
+
+    border-radius:
+      21px 5px 21px 5px;
+  }
+
+}
