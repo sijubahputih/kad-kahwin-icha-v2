@@ -4070,3 +4070,85 @@ img.floral,
   }
 
 }
+/* =========================================================
+   FOOTER SATIN
+========================================================= */
+
+.footer-satin {
+  position: absolute;
+
+  right: -90px;
+  bottom: -80px;
+
+  width: 330px;
+  height: 72%;
+
+  border-radius:
+    70% 0 0 20%;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(255,255,255,.08) 0%,
+      rgba(255,255,255,.50) 20%,
+      rgba(247,221,228,.58) 42%,
+      rgba(232,176,190,.48) 65%,
+      rgba(212,175,120,.16) 82%,
+      rgba(255,255,255,.10) 100%
+    );
+
+  opacity: .42;
+
+  filter:
+    blur(.6px);
+
+  transform-origin:
+    bottom right;
+
+  pointer-events: none;
+
+  z-index: 1;
+
+  box-shadow:
+    -25px 0 55px
+    rgba(216,127,148,.08);
+
+  animation:
+    footerSatinWave
+    7s ease-in-out infinite;
+}
+
+
+@keyframes footerSatinWave {
+
+  0%,
+  100% {
+    transform:
+      rotate(-5deg)
+      translateX(0)
+      scaleX(1)
+      scaleY(1);
+  }
+
+  50% {
+    transform:
+      rotate(2deg)
+      translateX(-28px)
+      scaleX(1.06)
+      scaleY(1.03);
+  }
+
+}
+@media (max-width: 620px) {
+
+  .footer-satin {
+    right: -100px;
+    bottom: -65px;
+
+    width: 250px;
+    height: 65%;
+
+    opacity: .34;
+  }
+
+}
