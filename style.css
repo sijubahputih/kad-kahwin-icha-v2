@@ -4255,3 +4255,45 @@ img.floral,
   position: relative;
   z-index: 10 !important;
 }
+/* =========================================================
+   MOBILE LAYER FIX
+   Floral mesti di depan frame
+========================================================= */
+
+@media (max-width: 620px) {
+
+  .content-section {
+    position: relative !important;
+    isolation: isolate !important;
+  }
+
+  /* frame pseudo-element di belakang */
+  .content-section::before,
+  .content-section::after {
+    z-index: 1 !important;
+  }
+
+  /* kalau ada frame HTML sebenar */
+  .content-section .section-frame {
+    z-index: 1 !important;
+  }
+
+  /* satin di tengah */
+  .content-section .section-satin {
+    z-index: 2 !important;
+  }
+
+  /* floral mesti di hadapan frame */
+  .content-section .section-floral,
+  .content-section .content-floral,
+  .content-section img[class*="floral"] {
+    position: absolute !important;
+    z-index: 5 !important;
+  }
+
+  /* isi card paling atas */
+  .content-section .section-card {
+    position: relative !important;
+    z-index: 10 !important;
+  }
+}
