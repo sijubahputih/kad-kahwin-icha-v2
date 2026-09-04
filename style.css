@@ -4152,37 +4152,32 @@ img.floral,
   }
 
 }
-
 /* =========================================================
-   PAGE 1 - FONT NAMA PENGANTIN FINAL
+   PAGE 1 - COUPLE NAME
+   SAME STYLE AS FOOTER
 ========================================================= */
 
 #openingGroom,
 #openingBride {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
+  font-family: "Great Vibes", cursive !important;
 
-  font-size: clamp(48px, 11vw, 76px) !important;
+  font-size: clamp(58px, 8vw, 96px) !important;
 
-  font-weight: 600 !important;
-
-  font-style: italic !important;
+  font-weight: 700 !important;
 
   line-height: 1.05 !important;
 
-  letter-spacing: 1px !important;
+  letter-spacing: 3px !important;
 
   color: var(--deep-pink) !important;
+
+  margin: 4px 0 !important;
 }
 .opening .ampersand {
-  font-family: "Cormorant Garamond", Georgia, serif !important;
-
-  font-size: 38px !important;
-
-  font-weight: 400 !important;
-
-  font-style: italic !important;
-
+  font-family: "Great Vibes", cursive !important;
+  font-size: clamp(38px, 5vw, 56px) !important;
+  font-weight: 700 !important;
   color: var(--champagne) !important;
-
-  margin: 8px 0 !important;
+  line-height: 1 !important;
+  margin: 6px 0 !important;
 }
