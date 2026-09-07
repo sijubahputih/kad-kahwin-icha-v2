@@ -23,8 +23,8 @@ bride: {
   maps: "https://maps.app.goo.gl/CvdHNXxJkoVAETxf9",
 
   rsvpPhone: {
-  groom: "601168413075",
-  bride: "60148740284"
+  groom: "60183154970",
+  bride: "60172564550"
 },
 
   groomParents: {
