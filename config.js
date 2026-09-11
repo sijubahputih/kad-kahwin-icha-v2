@@ -13,14 +13,14 @@ bride: {
   dateShort: "19.12.2026",
   day: "Sabtu",
 
-  akadTime: "9.00 pagi",
-  receptionTime: "12.00 tengah hari - 3.00 petang",
+  akadTime: "10.00 pagi",
+  receptionTime: "12.30 tengah hari - 3.00 petang",
 
-  countdownDate: "2026-12-19T09:00:00",
+  countdownDate: "2026-12-19T10:00:00",
 
-  venue: "IMAN IRIS GRAND HALL",
-  location: "KOTA DAMANSARA, SELANGOR",
-  maps: "https://maps.app.goo.gl/CvdHNXxJkoVAETxf9",
+  venue: "ANGGUN EVENT SPACE",
+  location: "Lot L2G1, Jln Zuhal U5/177, Star Avenue, 40150 Shah Alam, Selangor",
+  maps: "https://maps.app.goo.gl/5tAaJfQ3VoqmonVt5",
 
   rsvpPhone: {
   groom: "60183154970",
