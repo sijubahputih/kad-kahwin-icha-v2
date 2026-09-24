@@ -4392,3 +4392,24 @@ img.floral,
   }
 
 }
+/* =========================================================
+   ATUR CARA - SINGLE EVENT CENTER
+========================================================= */
+
+.schedule-grid {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.schedule-grid .schedule-card {
+  width: 100% !important;
+  max-width: 420px !important;
+  margin: 0 auto !important;
+  text-align: center !important;
+}
+.schedule-grid {
+  margin-top: 38px !important;
+  margin-bottom: 20px !important;
+}
