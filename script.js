@@ -21,7 +21,6 @@ $("brideMother").textContent = wedding.brideParents.mother;
 $("fullGroom").textContent = wedding.groom.fullName;
 $("fullBride").textContent = wedding.bride.fullName;
 
-$("akadTime").textContent = wedding.akadTime;
 $("receptionTime").textContent = wedding.receptionTime;
 
 $("venueName").textContent = wedding.venue;
