@@ -13,7 +13,6 @@ bride: {
   dateShort: "19.12.2026",
   day: "Sabtu",
 
-  akadTime: "10.00 pagi",
   receptionTime: "12.30 tengah hari - 3.00 petang",
 
   countdownDate: "2026-12-19T10:00:00",
